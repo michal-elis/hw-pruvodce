@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kvíz | Multimediální průvodce základů hardware</title>
+  <meta name="description" content="Interaktivní kvíz k ověření znalostí z montáže PC s okamžitým vyhodnocením." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1 class="site-title">Multimediální průvodce základů hardware</h1>
+        <p class="site-subtitle">Interaktivní kvíz s okamžitým vyhodnocením.</p>
+      </div>
+
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <a href="index.html">Úvod</a>
+        <a href="video.html">Video</a>
+        <a href="materialy.html">Materiály</a>
+        <a href="kviz.html" aria-current="page">Kvíz</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="o-projektu.html">O projektu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah" class="site-main">
+    <div class="container">
+      <section class="card">
+        <h2>Kvíz</h2>
+        <p class="muted">
+          Vyber odpověď. Kvíz ji ihned vyhodnotí a ukáže stručné vysvětlení.
+        </p>
+
+        <div class="quiz-top">
+          <div id="quizProgress" class="muted">0 / 0</div>
+          <div id="quizScore" class="muted">Skóre: 0</div>
+          <button id="quizReset" class="btn" type="button">Reset</button>
+        </div>
+
+        <div id="quizRoot" class="quiz-root" aria-live="polite"></div>
+
+        <div id="quizSummary" class="quiz-summary" hidden></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Multimediální průvodce základů hardware</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/kviz.js"></script>
+</body>
+</html>

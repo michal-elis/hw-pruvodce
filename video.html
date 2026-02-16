@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Výukové video | Multimediální průvodce základů hardware</title>
+  <meta name="description" content="Výukové video montáže počítače krok za krokem včetně doporučeného postupu a kontrolních bodů." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!--<a class="skip-link" href="#obsah">Přeskočit na obsah</a> -->
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1 class="site-title">Multimediální průvodce základů hardware</h1>
+        <p class="site-subtitle">Výukové video montáže počítače krok za krokem.</p>
+      </div>
+
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <a href="index.html">Úvod</a>
+        <a href="video.html" aria-current="page">Video</a>
+        <a href="materialy.html">Materiály</a>
+        <a href="kviz.html">Kvíz</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="o-projektu.html">O projektu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah" class="site-main">
+    <div class="container">
+      <section class="card">
+        <h2>Výukové video: montáž počítače</h2>
+        <p>
+          Video demonstruje správný postup montáže PC a upozorňuje na typické chyby
+          (ESD, orientace konektorů, správné usazení komponent).
+        </p>
+
+     <div class="video-full">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/7PFTYyDTBXE"
+    title="Výukové video – montáž PC"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+        <p class="muted">
+          Pokud se video nenačte, zkontroluj přístupová práva (neveřejné/nezalistované) a správné ID videa.
+        </p>
+      </section>
+
+      <section class="card" style="margin-top: 22px;">
+        <h2>Doporučený postup studia</h2>
+        <ol>
+          <li>Nejdřív zhlédni video celé bez přerušování.</li>
+          <li>Podruhé sleduj s pauzami a porovnávej postup s reálnými komponentami.</li>
+          <li>Pak otevři stránku <a href="materialy.html">Materiály</a> a stáhni pracovní listy.</li>
+          <li>Nakonec vyplň <a href="kviz.html">Kvíz</a> pro ověření znalostí.</li>
+        </ol>
+      </section>
+
+      <section class="card" style="margin-top: 22px;">
+        <h2>Kontrolní body (co si z videa odnést)</h2>
+        <ul>
+          <li>Správná manipulace s deskou a komponentami (ESD zásady).</li>
+          <li>Pořadí montáže: CPU → chladič → RAM → M.2 SSD → deska do case → zdroj → kabeláž → GPU.</li>
+          <li>Typické chyby: špatně usazené RAM, přepětí šroubů, zapomenuté napájení CPU (EPS), špatná orientace konektorů.</li>
+          <li>První start: POST kontrola, nastavení UEFI, kontrola teplot.</li>
+        </ul>
+      </section>
+
+      <section class="card" style="margin-top: 22px;">
+        <h2>Kapitoly videa (volitelné)</h2>
+        <p class="muted">
+          Sem můžeš doplnit časové značky, pokud je budeš mít ve videu.
+        </p>
+        <ul class="chapters">
+          <li><span class="time">00:00</span> Úvod a bezpečnost (ESD)</li>
+          <li><span class="time">00:00</span> CPU + chladič</li>
+          <li><span class="time">00:00</span> RAM + M.2 SSD</li>
+          <li><span class="time">00:00</span> Deska do skříně + zdroj</li>
+          <li><span class="time">00:00</span> Kabeláž + GPU</li>
+          <li><span class="time">00:00</span> První start a kontrola</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Multimediální průvodce základů hardware</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

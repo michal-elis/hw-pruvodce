@@ -1,0 +1,26 @@
+[
+  {
+    "id": "q1",
+    "text": "Který krok je typicky správně jako první při montáži na základní desce mimo skříň?",
+    "options": {
+      "A": "Osazení GPU do PCIe slotu",
+      "B": "Osazení CPU do socketu",
+      "C": "Připojení SATA kabelů",
+      "D": "Zapojení předního panelu skříně (PWR/LED)"
+    },
+    "correct": "B",
+    "explanation": "CPU se obvykle osazuje jako první, protože přístup k patici je nejsnazší mimo skříň."
+  },
+  {
+    "id": "q2",
+    "text": "Co je nejčastější důsledek špatně usazeného modulu RAM?",
+    "options": {
+      "A": "Počítač často neprojde POST (nenaběhne)",
+      "B": "Zvýší se spotřeba zdroje o 50 %",
+      "C": "Disk se přepne do režimu read-only",
+      "D": "Vypne se integrovaná síťová karta"
+    },
+    "correct": "A",
+    "explanation": "RAM musí „zacvaknout“ na obou stranách. Při špatném usazení PC často vůbec nenastartuje."
+  }
+]
