@@ -1,11 +1,76 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>HW Průvodce</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multimediální průvodce základů hardware</title>
+  <meta name="description" content="Multimediální průvodce základů PC hardwaru: video montáže, materiály, kvíz a katalog komponent." />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-    <h1>Multimediální průvodce hardwarem</h1>
-    <p>Web je ve vývoji.</p>
+  <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1 class="site-title">Multimediální průvodce základů hardware</h1>
+        <p class="site-subtitle">Statický web k výukovému videu, materiálům a kvízu.</p>
+      </div>
+
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <a href="index.html" aria-current="page">Úvod</a>
+        <a href="video.html">Video</a>
+        <a href="materialy.html">Materiály</a>
+        <a href="kviz.html">Kvíz</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="o-projektu.html">O projektu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah" class="site-main">
+    <div class="container">
+      <section class="card">
+        <h2>Co tu najdeš</h2>
+        <ul>
+          <li>Výukové video montáže počítače (embed)</li>
+          <li>Studijní materiály ke stažení (PDF)</li>
+          <li>Interaktivní kvíz s okamžitým vyhodnocením</li>
+          <li>Katalog současného hardwaru</li>
+        </ul>
+      </section>
+
+      <section class="grid">
+        <a class="tile" href="video.html">
+          <h3>Výukové video</h3>
+          <p>Kroková montáž PC + titulky.</p>
+        </a>
+
+        <a class="tile" href="materialy.html">
+          <h3>Materiály</h3>
+          <p>PDF pracovní listy a taháky.</p>
+        </a>
+
+        <a class="tile" href="kviz.html">
+          <h3>Kvíz</h3>
+          <p>Ověření znalostí ihned po vyplnění.</p>
+        </a>
+
+        <a class="tile" href="katalog.html">
+          <h3>Katalog hardware</h3>
+          <p>Přehled komponent a pojmů.</p>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Multimediální průvodce základů hardware</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
