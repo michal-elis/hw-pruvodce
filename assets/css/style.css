@@ -165,3 +165,96 @@ h2{
     padding: 40px 0 50px;
   }
 }
+
+/* ===== QUIZ ===== */
+
+.quiz-top{
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn{
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn:hover{
+  border-color: var(--accent);
+}
+
+.quiz-root{
+  margin-top: 20px;
+  display: grid;
+  gap: 18px;
+}
+
+.quiz-q{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: var(--surface);
+}
+
+.quiz-q h3{
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.quiz-opts{
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quiz-opt{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.quiz-opt:hover{
+  border-color: var(--accent);
+}
+
+.quiz-opt input{
+  margin-top: 3px;
+}
+
+/* Správná odpověď */
+.quiz-opt.correct{
+  border-color: #16a34a;
+  background: #dcfce7;
+}
+
+/* Špatná odpověď */
+.quiz-opt.wrong{
+  border-color: #dc2626;
+  background: #fee2e2;
+}
+
+.quiz-expl{
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.quiz-summary{
+  margin-top: 20px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
