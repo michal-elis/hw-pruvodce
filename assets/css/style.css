@@ -1,19 +1,13 @@
-/* ===============================
-   UTB-like minimalistický styl (bez topbaru)
-   Multimediální průvodce HW
-   =============================== */
-
 :root{
-  /* UTB-ish palette */
-  --bg: #f6f7f9;          /* světlé pozadí */
-  --surface: #ffffff;     /* karty / plochy */
+  --bg: #f6f7f9;
+  --surface: #ffffff;
 
-  --text: #111827;        /* hlavní text */
-  --muted: #6b7280;       /* sekundární text */
-  --line: #e5e7eb;        /* linky */
+  --text: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
 
-  --accent: #f57c00;      /* UTB oranžová (akcent) */
-  --nav: #2f3a4a;         /* tmavá modro-šedá pro důraz */
+  --accent: #f57c00;
+  --nav: #2f3a4a;
 
   --radius: 12px;
   --max: 1040px;
@@ -30,37 +24,43 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
-/* ===== LINKS ===== */
+a,
+a:hover,
+a:focus{
+  text-decoration: none;
+}
 
 a{
-  color: #c65f00; /* čitelnější oranžová pro text */
-  text-decoration: none;
+  color: #c65f00;
 }
-a:hover{
-  text-decoration: none;
-}
-
-/* ===== LAYOUT ===== */
 
 .container{
   width: min(100% - 40px, var(--max));
   margin: 0 auto;
 }
 
+/* ===== HEADER ===== */
+
 .site-header{
   background: var(--surface);
   border-bottom: 1px solid var(--line);
 }
 
-.site-header .container{
+.header-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 26px 0 18px;
+}
+
+.brand{
+  max-width: 80%;
 }
 
 .site-title{
   margin: 0;
   font-size: 22px;
-  font-weight: 750;
-  letter-spacing: -0.2px;
+  font-weight: 700;
   color: var(--nav);
 }
 
@@ -70,25 +70,32 @@ a:hover{
   font-size: 14px;
 }
 
-/* ===== NAV (UTB-like underline + oranžový akcent) ===== */
+/* ===== LOGO ===== */
+
+.header-logo{
+  width: 170px;      /* decentní velikost */
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* ===== NAV ===== */
 
 .site-nav{
-  margin-top: 16px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 22px;
+  padding: 14px 0 16px;
 }
 
 .site-nav a{
-  padding: 8px 2px;
   font-size: 14px;
   color: var(--nav);
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  padding-bottom: 6px;
+  transition: border-color 0.2s ease;
 }
 
 .site-nav a:hover{
-  border-bottom-color: rgba(245,124,0,0.40);
+  border-bottom-color: rgba(245,124,0,0.4);
 }
 
 .site-nav a[aria-current="page"]{
@@ -101,8 +108,6 @@ a:hover{
   padding: 56px 0 70px;
 }
 
-/* ===== CARDS ===== */
-
 .card{
   background: var(--surface);
   border: 1px solid var(--line);
@@ -111,169 +116,17 @@ a:hover{
   box-shadow: 0 1px 8px rgba(17,24,39,0.04);
 }
 
-/* Pomocná třída místo inline stylů */
-.stack{ margin-top: 22px; }
+.stack{
+  margin-top: 22px;
+}
 
 .muted{
   color: var(--muted);
   font-size: 14px;
 }
 
-/* Nadpisy trochu „institucionálně“ */
 h2{
   color: var(--nav);
-  letter-spacing: -0.2px;
-}
-
-/* ===== VIDEO ===== */
-
-.video-full{
-  width: 100%;
-  margin: 24px 0 40px;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: #000;
-  border: 1px solid var(--line);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-}
-
-.video-full iframe{
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* ===== GRID / TILES ===== */
-
-.grid{
-  margin-top: 32px;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.tile{
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 24px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.tile:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  border-color: rgba(245,124,0,0.25);
-}
-
-.tile h3{
-  margin: 0 0 10px;
-  font-size: 17px;
-  color: var(--nav);
-}
-
-.tile p{
-  margin: 0;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* ===== BUTTON ===== */
-
-.btn{
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--nav);
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover{
-  border-color: var(--accent);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
-
-/* ===== QUIZ ===== */
-
-.quiz-top{
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
-
-.quiz-root{
-  margin-top: 18px;
-  display: grid;
-  gap: 16px;
-}
-
-.quiz-q{
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px;
-  background: var(--surface);
-}
-
-.quiz-q h3{
-  margin: 0 0 10px;
-  font-size: 16px;
-  color: var(--nav);
-}
-
-.quiz-opts{
-  display: grid;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.quiz-opt{
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  cursor: pointer;
-  transition: border-color 0.2s ease;
-}
-
-.quiz-opt:hover{
-  border-color: var(--accent);
-}
-
-.quiz-opt input{ margin-top: 3px; }
-
-.quiz-opt.correct{
-  border-color: #16a34a33;
-  background: #16a34a10;
-}
-
-.quiz-opt.wrong{
-  border-color: #dc262633;
-  background: #dc262610;
-}
-
-.quiz-expl{
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.quiz-summary{
-  margin-top: 18px;
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: #fff;
 }
 
 /* ===== FOOTER ===== */
@@ -292,7 +145,23 @@ h2{
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px){
-  .grid{ grid-template-columns: 1fr; }
-  .site-main{ padding: 40px 0 50px; }
-  .site-nav{ gap: 14px; }
+
+  .header-row{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .header-logo{
+    width: 48px;
+  }
+
+  .site-nav{
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .site-main{
+    padding: 40px 0 50px;
+  }
 }
