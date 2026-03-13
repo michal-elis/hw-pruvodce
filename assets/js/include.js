@@ -1,24 +1,8 @@
 async function includeHTML(id, file) {
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-  const current = location.pathname.split("/").pop();
-
-  document.querySelectorAll(".site-nav a").forEach(link => {
-
-    if(link.getAttribute("href") === current){
-      link.setAttribute("aria-current","page");
-    }
-
-  });
-
-});
-
   const target = document.getElementById(id);
   if (!target) return;
 
   try {
-
     const resp = await fetch(file);
 
     if (!resp.ok) {
@@ -33,5 +17,18 @@ async function includeHTML(id, file) {
     target.innerHTML = `Chyba při načítání ${file}`;
     console.error(err);
   }
+}
 
+function markActiveNav() {
+  const current = location.pathname.split("/").pop() || "index.html";
+
+  document.querySelectorAll(".site-nav a").forEach(link => {
+    const href = link.getAttribute("href").split("/").pop();
+
+    if (href === current) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
 }
