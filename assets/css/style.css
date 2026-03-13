@@ -13,7 +13,9 @@
   --max: 1040px;
 }
 
-*{ box-sizing: border-box; }
+*{
+  box-sizing: border-box;
+}
 
 body{
   margin: 0;
@@ -42,29 +44,35 @@ a{
 /* ===== HEADER ===== */
 
 .site-header{
- padding-top:30px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .container:first-child{
+  padding-top: 34px;
 }
 
 .header-row{
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
   align-items: center;
-  justify-content: space-between;
-  /*padding: 26px 0 18px;*/
+  gap: 32px;
 }
 
 .brand{
-  max-width: 600px;
+  min-width: 0;
 }
 
 .site-title{
   margin: 0;
   font-size: 22px;
   font-weight: 700;
+  line-height: 1.25;
   color: var(--nav);
 }
 
 .site-subtitle{
-  margin: 6px 0 0;
+  margin: 10px 0 0;
   color: var(--muted);
   font-size: 14px;
 }
@@ -72,17 +80,20 @@ a{
 /* ===== LOGO ===== */
 
 .header-logo{
-  width: 120px;      /* decentní velikost */
+  display: block;
+  width: 150px;
+  max-width: 100%;
   height: auto;
-  /*flex-shrink: 0;*/
+  justify-self: end;
 }
 
 /* ===== NAV ===== */
 
 .site-nav{
   display: flex;
+  flex-wrap: wrap;
   gap: 22px;
-  padding: 14px 0 16px;
+  padding: 18px 0 18px;
 }
 
 .site-nav a{
@@ -90,7 +101,7 @@ a{
   color: var(--nav);
   border-bottom: 2px solid transparent;
   padding-bottom: 6px;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .site-nav a:hover{
@@ -111,7 +122,7 @@ a{
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 26px;
+  padding: 26px 32px;
   box-shadow: 0 1px 8px rgba(17,24,39,0.04);
 }
 
@@ -125,6 +136,7 @@ a{
 }
 
 h2{
+  margin-top: 0;
   color: var(--nav);
 }
 
@@ -145,23 +157,31 @@ h2{
 
 @media (max-width: 768px){
 
+  .site-header .container:first-child{
+    padding-top: 24px;
+  }
+
   .header-row{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .header-logo{
-    width: 48px;
+    width: 110px;
+    justify-self: start;
   }
 
   .site-nav{
-    flex-wrap: wrap;
     gap: 16px;
+    padding: 16px 0 16px;
   }
 
   .site-main{
     padding: 40px 0 50px;
+  }
+
+  .card{
+    padding: 22px 20px;
   }
 }
 
@@ -183,6 +203,7 @@ h2{
   border-radius: 8px;
   cursor: pointer;
 }
+
 .btn:hover{
   border-color: var(--accent);
 }
