@@ -60,6 +60,8 @@ async function loadLayout(){
   await includeHTML("header","/components/header.html");
   await includeHTML("footer","/components/footer.html");
 
+   markActiveNav();
+   
   const year = document.getElementById("year");
   if(year){
     year.textContent = new Date().getFullYear();
