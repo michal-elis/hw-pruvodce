@@ -42,19 +42,18 @@ a{
 /* ===== HEADER ===== */
 
 .site-header{
-  background: var(--surface);
-  border-bottom: 1px solid var(--line);
+ padding-top:30px;
 }
 
 .header-row{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 26px 0 18px;
+  /*padding: 26px 0 18px;*/
 }
 
 .brand{
-  max-width: 80%;
+  max-width: 600px;
 }
 
 .site-title{
@@ -73,9 +72,9 @@ a{
 /* ===== LOGO ===== */
 
 .header-logo{
-  width: 170px;      /* decentní velikost */
+  width: 120px;      /* decentní velikost */
   height: auto;
-  flex-shrink: 0;
+  /*flex-shrink: 0;*/
 }
 
 /* ===== NAV ===== */
