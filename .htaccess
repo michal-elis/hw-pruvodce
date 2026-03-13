@@ -6,6 +6,8 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^ https://hwpruvodce.cz%{REQUEST_URI} [L,R=301]
 
+
+# ladění - vypnutá HTML cache
 <FilesMatch "\.(html|htm)$">
 Header set Cache-Control "no-cache, no-store, must-revalidate"
 Header set Pragma "no-cache"
