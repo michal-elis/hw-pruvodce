@@ -1,0 +1,18 @@
+on: push
+name: Deploy website on push
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
+
+    - name: LFTP rsync check     #synchronizace na FTP skrze LFTP klient
+      run:  |
+        sudo apt update && apt install -y lftp
+        lftp -u "${{ secrets.ftp_username }}","${{ secrets.ftp_password }}" "${{ secrets.ftp_server }}" <<EOF
+        set ssl:verify-certificate no
+        mirror -R --only-newer −−dereference −−continue --delete −−verbose=3 --parallel=10 --exclude .git --exclude .github --exclude .README.md ./ hwpruvodce.cz
+        bye
+        EOF
