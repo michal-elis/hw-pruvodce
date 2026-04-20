@@ -33,6 +33,7 @@
     if (!Array.isArray(data) || data.length === 0) {
       throw new Error("Soubor otazky.json je prázdný nebo má špatný formát.");
     }
+
     return data;
   }
 
@@ -44,6 +45,19 @@
       [copy[i], copy[j]] = [copy[j], copy[i]];
     }
     return copy.slice(0, Math.min(n, copy.length));
+  }
+
+  function pickOptions(q) {
+    const allKeys = Object.keys(q.options);
+    const correctKey = q.correct;
+
+    const wrongKeys = allKeys.filter((key) => key !== correctKey);
+
+    // vybere 2 náhodné špatné odpovědi
+    const pickedWrong = pickRandom(wrongKeys, 2);
+
+    // spojí správnou a špatné, pak pořadí znovu promíchá
+    return pickRandom([correctKey, ...pickedWrong], 3);
   }
 
   function resetState() {
@@ -74,8 +88,9 @@
     wrap.appendChild(opts);
 
     const name = `quiz_${q.id}`;
+    const optionKeys = pickOptions(q);
 
-    for (const key of ["A", "B", "C", "D"]) {
+    for (const key of optionKeys) {
       const label = document.createElement("label");
       label.className = "quiz-opt";
       label.dataset.opt = key;
