@@ -2,8 +2,9 @@
 (() => {
   "use strict";
 
-  const DATA_URL = "../assets/data/otazky.json";
+  const DATA_URL = "/assets/data/otazky.json";
   const PICK_COUNT = 10;
+  const DISPLAY_LABELS = ["A", "B", "C"];
 
   const root = document.getElementById("quizRoot");
   const progressEl = document.getElementById("quizProgress");
@@ -13,8 +14,8 @@
 
   if (!root || !progressEl || !scoreEl || !resetBtn || !summaryEl) return;
 
-  let QUESTIONS = [];        // aktuálně vybraných 10
-  let BANK = [];             // celý JSON
+  let QUESTIONS = [];
+  let BANK = [];
   let answeredCount = 0;
   let score = 0;
   const answered = new Set();
@@ -29,7 +30,6 @@
     if (!res.ok) throw new Error(`Nelze načíst otázky (${res.status})`);
     const data = await res.json();
 
-    // základní validace
     if (!Array.isArray(data) || data.length === 0) {
       throw new Error("Soubor otazky.json je prázdný nebo má špatný formát.");
     }
@@ -38,7 +38,6 @@
   }
 
   function pickRandom(arr, n) {
-    // Fisher–Yates shuffle copy, potom slice
     const copy = arr.slice();
     for (let i = copy.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -50,14 +49,16 @@
   function pickOptions(q) {
     const allKeys = Object.keys(q.options);
     const correctKey = q.correct;
-
     const wrongKeys = allKeys.filter((key) => key !== correctKey);
 
-    // vybere 2 náhodné špatné odpovědi
     const pickedWrong = pickRandom(wrongKeys, 2);
+    const selectedKeys = pickRandom([correctKey, ...pickedWrong], 3);
 
-    // spojí správnou a špatné, pak pořadí znovu promíchá
-    return pickRandom([correctKey, ...pickedWrong], 3);
+    return selectedKeys.map((originalKey, index) => ({
+      originalKey,
+      displayLabel: DISPLAY_LABELS[index],
+      text: q.options[originalKey]
+    }));
   }
 
   function resetState() {
@@ -88,21 +89,22 @@
     wrap.appendChild(opts);
 
     const name = `quiz_${q.id}`;
-    const optionKeys = pickOptions(q);
+    const optionItems = pickOptions(q);
 
-    for (const key of optionKeys) {
+    for (const item of optionItems) {
       const label = document.createElement("label");
       label.className = "quiz-opt";
-      label.dataset.opt = key;
+      label.dataset.opt = item.originalKey;
+      label.dataset.display = item.displayLabel;
 
       const input = document.createElement("input");
       input.type = "radio";
       input.name = name;
-      input.value = key;
-      input.setAttribute("aria-label", `${key}: ${q.options[key]}`);
+      input.value = item.originalKey;
+      input.setAttribute("aria-label", `${item.displayLabel}: ${item.text}`);
 
       const text = document.createElement("div");
-      text.innerHTML = `<strong>${key}</strong> — ${escapeHtml(q.options[key])}`;
+      text.innerHTML = `<strong>${item.displayLabel}</strong> — ${escapeHtml(item.text)}`;
 
       label.appendChild(input);
       label.appendChild(text);
@@ -110,7 +112,7 @@
       label.addEventListener("click", () => {
         if (answered.has(q.id)) return;
         input.checked = true;
-        gradeQuestion(wrap, q, key);
+        gradeQuestion(wrap, q, item.originalKey);
       });
 
       opts.appendChild(label);
@@ -119,28 +121,37 @@
     return wrap;
   }
 
-  function gradeQuestion(wrap, q, chosen) {
+  function gradeQuestion(wrap, q, chosenOriginalKey) {
     answered.add(q.id);
     answeredCount++;
 
-    const isCorrect = chosen === q.correct;
+    const isCorrect = chosenOriginalKey === q.correct;
     if (isCorrect) score++;
 
     const labels = wrap.querySelectorAll(".quiz-opt");
+    let correctDisplayLabel = "";
+
     for (const lab of labels) {
-      const opt = lab.dataset.opt;
+      const originalKey = lab.dataset.opt;
+      const displayLabel = lab.dataset.display;
       const inp = lab.querySelector("input");
       if (inp) inp.disabled = true;
 
-      if (opt === q.correct) lab.classList.add("correct");
-      if (opt === chosen && !isCorrect) lab.classList.add("wrong");
+      if (originalKey === q.correct) {
+        lab.classList.add("correct");
+        correctDisplayLabel = displayLabel;
+      }
+
+      if (originalKey === chosenOriginalKey && !isCorrect) {
+        lab.classList.add("wrong");
+      }
     }
 
     const expl = document.createElement("div");
     expl.className = "quiz-expl";
     expl.innerHTML = isCorrect
       ? `<strong>Správně.</strong> ${escapeHtml(q.explanation)}`
-      : `<strong>Špatně.</strong> Správně je <strong>${q.correct}</strong>. ${escapeHtml(q.explanation)}`;
+      : `<strong>Špatně.</strong> Správně je <strong>${correctDisplayLabel}</strong>. ${escapeHtml(q.explanation)}`;
 
     wrap.appendChild(expl);
 
