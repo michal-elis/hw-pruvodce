@@ -49,14 +49,16 @@ a{
 }
 
 .site-header .container:first-child{
-  padding-top: 34px;
+  padding-top: 0;
+  padding-bottom: 6px;
 }
 
 .header-row{
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
+  grid-template-columns: minmax(0, 1fr) 140px;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
+  margin-bottom: -16px;
 }
 
 .brand{
@@ -67,24 +69,28 @@ a{
   margin: 0;
   font-size: 22px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   color: var(--nav);
 }
 
 .site-subtitle{
-  margin: 10px 0 0;
+  margin: 6px 0 0;
   color: var(--muted);
   font-size: 14px;
+  line-height: 1.4;
 }
 
 /* ===== LOGO ===== */
 
 .header-logo{
   display: block;
-  width: 150px;
+  width: 140px;          /* větší než teď */
   max-width: 100%;
   height: auto;
   justify-self: end;
+
+  position: relative;
+  top: 14px;
 }
 
 /* ===== NAV ===== */
@@ -93,7 +99,7 @@ a{
   display: flex;
   flex-wrap: wrap;
   gap: 22px;
-  padding: 18px 0 18px;
+  padding: 2px 0 6px;
 }
 
 .site-nav a{
@@ -158,7 +164,7 @@ h2{
 @media (max-width: 768px){
 
   .site-header .container:first-child{
-    padding-top: 24px;
+    padding-top: 16px;
   }
 
   .header-row{
@@ -167,13 +173,13 @@ h2{
   }
 
   .header-logo{
-    width: 110px;
+    width: 100px;
     justify-self: start;
   }
 
   .site-nav{
     gap: 16px;
-    padding: 16px 0 16px;
+    padding: 14px 0;
   }
 
   .site-main{
@@ -252,13 +258,11 @@ h2{
   margin-top: 3px;
 }
 
-/* Správná odpověď */
 .quiz-opt.correct{
   border-color: #16a34a;
   background: #dcfce7;
 }
 
-/* Špatná odpověď */
 .quiz-opt.wrong{
   border-color: #dc2626;
   background: #fee2e2;
