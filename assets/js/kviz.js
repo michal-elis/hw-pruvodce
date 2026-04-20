@@ -2,7 +2,7 @@
 (() => {
   "use strict";
 
-  const DATA_URL = "assets/data/otazky.json";
+  const DATA_URL = "..assets/data/otazky.json";
   const PICK_COUNT = 10;
 
   const root = document.getElementById("quizRoot");
