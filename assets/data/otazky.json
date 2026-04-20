@@ -1,27 +1,182 @@
 [
   {
-    "id": "1",
-    "text": "Který krok je typicky správně jako první při montáži na základní desce mimo skříň?",
+    "id": "q1",
+    "text": "Který konektor napájí procesor na základní desce?",
     "options": {
-      "A": "Osazení GPU do PCIe slotu",
-      "B": "Osazení CPU do socketu",
-      "C": "Připojení SATA kabelů",
-      "D": "Zapojení předního panelu skříně (PWR/LED)"
+      "A": "24pin ATX",
+      "B": "SATA Power",
+      "C": "8pin EPS",
+      "D": "PCIe 6pin"
     },
-    "correct": "B",
-    "explanation": "CPU se obvykle osazuje jako první, protože přístup k patici je nejsnazší mimo skříň."
+    "correct": "C",
+    "explanation": "Procesor je napájen přes 4/8pin EPS konektor, nikoli přes hlavní 24pin."
   },
   {
-    "id": "2",
-    "text": "Co je nejčastější důsledek špatně usazeného modulu RAM?",
+    "id": "q2",
+    "text": "Co se stane, když zapomenete zapojit napájení grafické karty?",
     "options": {
-      "A": "Počítač často neprojde POST (nenaběhne)",
-      "B": "Zvýší se spotřeba zdroje o 50 %",
-      "C": "Disk se přepne do režimu read-only",
-      "D": "Vypne se integrovaná síťová karta"
+      "A": "Počítač bude fungovat normálně",
+      "B": "Grafická karta nebude mít výkon",
+      "C": "Počítač se často nespustí nebo zobrazí chybu",
+      "D": "Zvýší se hlučnost ventilátorů"
     },
-    "correct": "A",
-    "explanation": "RAM musí „zacvaknout“ na obou stranách. Při špatném usazení PC často vůbec nenastartuje."
+    "correct": "C",
+    "explanation": "Moderní GPU bez napájení často nenaběhne nebo zobrazí chybu."
+  },
+  {
+    "id": "q3",
+    "text": "K čemu slouží I/O shield?",
+    "options": {
+      "A": "Chlazení procesoru",
+      "B": "Ochrana zadních portů a správné usazení desky",
+      "C": "Napájení USB portů",
+      "D": "Zlepšení výkonu RAM"
+    },
+    "correct": "B",
+    "explanation": "I/O shield chrání porty a pomáhá správnému usazení základní desky."
+  },
+  {
+    "id": "q4",
+    "text": "Jaký je typický počet pinů hlavního napájecího konektoru desky?",
+    "options": {
+      "A": "8",
+      "B": "16",
+      "C": "24",
+      "D": "32"
+    },
+    "correct": "C",
+    "explanation": "Standardní ATX konektor má 24 pinů."
+  },
+  {
+    "id": "q5",
+    "text": "Co znamená POST při startu počítače?",
+    "options": {
+      "A": "Program Output System Test",
+      "B": "Power-On Self Test",
+      "C": "Primary Operating System Task",
+      "D": "Peripheral Output Setup Tool"
+    },
+    "correct": "B",
+    "explanation": "POST je kontrola hardwaru při zapnutí počítače."
+  },
+  {
+    "id": "q6",
+    "text": "Kam se zapojuje ventilátor procesoru?",
+    "options": {
+      "A": "SYS_FAN",
+      "B": "CPU_FAN",
+      "C": "CHA_FAN",
+      "D": "PWR_FAN"
+    },
+    "correct": "B",
+    "explanation": "CPU_FAN je dedikovaný konektor pro chladič procesoru."
+  },
+  {
+    "id": "q7",
+    "text": "Jaký je hlavní rozdíl mezi HDD a SSD?",
+    "options": {
+      "A": "SSD je mechanický disk",
+      "B": "HDD je rychlejší",
+      "C": "SSD nemá pohyblivé části",
+      "D": "HDD má menší kapacitu"
+    },
+    "correct": "C",
+    "explanation": "SSD je elektronické úložiště bez mechanických částí."
+  },
+  {
+    "id": "q8",
+    "text": "Co je potřeba před instalací procesoru zkontrolovat?",
+    "options": {
+      "A": "Barvu základní desky",
+      "B": "Kompatibilitu socketu",
+      "C": "Velikost ventilátoru",
+      "D": "Počet USB portů"
+    },
+    "correct": "B",
+    "explanation": "Procesor musí odpovídat socketu základní desky."
+  },
+  {
+    "id": "q9",
+    "text": "K čemu slouží termální pasta?",
+    "options": {
+      "A": "Zvyšuje výkon CPU",
+      "B": "Zlepšuje přenos tepla mezi CPU a chladičem",
+      "C": "Chrání RAM",
+      "D": "Zvyšuje napětí"
+    },
+    "correct": "B",
+    "explanation": "Pasta vyplňuje mikroskopické nerovnosti a zlepšuje přenos tepla."
+  },
+  {
+    "id": "q10",
+    "text": "Jaký typ paměti se používá v moderních PC?",
+    "options": {
+      "A": "DDR",
+      "B": "DDR4/DDR5",
+      "C": "SDRAM",
+      "D": "VRAM"
+    },
+    "correct": "B",
+    "explanation": "Moderní systémy používají DDR4 nebo DDR5."
+  },
+  {
+    "id": "q11",
+    "text": "Který slot se používá pro grafickou kartu?",
+    "options": {
+      "A": "PCI",
+      "B": "PCIe x16",
+      "C": "SATA",
+      "D": "M.2"
+    },
+    "correct": "B",
+    "explanation": "Grafické karty se instalují do PCIe x16 slotu."
+  },
+  {
+    "id": "q12",
+    "text": "Co je M.2 SSD?",
+    "options": {
+      "A": "Externí disk",
+      "B": "Typ kabelu",
+      "C": "Interní SSD bez kabelů",
+      "D": "Typ RAM"
+    },
+    "correct": "C",
+    "explanation": "M.2 SSD se zapojuje přímo do desky bez kabelů."
+  },
+  {
+    "id": "q13",
+    "text": "Co se stane, když není zapojený CPU chladič?",
+    "options": {
+      "A": "Nic",
+      "B": "Počítač se zpomalí",
+      "C": "CPU se rychle přehřeje",
+      "D": "RAM nebude fungovat"
+    },
+    "correct": "C",
+    "explanation": "Bez chlazení se CPU během sekund přehřeje."
+  },
+  {
+    "id": "q14",
+    "text": "K čemu slouží BIOS/UEFI?",
+    "options": {
+      "A": "Pro hraní her",
+      "B": "Pro správu hardwaru a start systému",
+      "C": "Pro ukládání dat",
+      "D": "Pro připojení k internetu"
+    },
+    "correct": "B",
+    "explanation": "BIOS/UEFI inicializuje hardware a spouští systém."
+  },
+  {
+    "id": "q15",
+    "text": "Co znamená dual-channel u RAM?",
+    "options": {
+      "A": "Použití dvou disků",
+      "B": "Použití dvou procesorů",
+      "C": "Paralelní přístup ke dvěma modulům RAM",
+      "D": "Zvýšení napětí RAM"
+    },
+    "correct": "C",
+    "explanation": "Dual-channel umožňuje vyšší propustnost paměti."
   }
-
 ]
