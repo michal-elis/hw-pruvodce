@@ -1,11 +1,11 @@
 [
   {
     "id": "q1",
-    "text": "Který konektor napájí procesor na základní desce?",
+    "text": "Jak se nazývá konektor, který napájí procesor na základní desce?",
     "options": {
-      "A": "24pin ATX",
+      "A": "Molex",
       "B": "SATA Power",
-      "C": "8pin EPS",
+      "C": "4/8pin EPS",
       "D": "PCIe 6pin"
     },
     "correct": "C",
@@ -30,10 +30,10 @@
       "A": "Chlazení procesoru",
       "B": "Ochrana zadních portů a správné usazení desky",
       "C": "Napájení USB portů",
-      "D": "Zlepšení výkonu RAM"
+      "D": "Chlazení operační paměti"
     },
     "correct": "B",
-    "explanation": "I/O shield chrání porty a pomáhá správnému usazení základní desky."
+    "explanation": "I/O shield chrání porty a pomáhá správnému usazení základní desky. Dodává se spolu se základní deskou."
   },
   {
     "id": "q4",
@@ -45,7 +45,7 @@
       "D": "32"
     },
     "correct": "C",
-    "explanation": "Standardní ATX konektor má 24 pinů."
+    "explanation": "Standardní ATX konektor má 24 pinů (někdy také označováno jako 20 + 4)."
   },
   {
     "id": "q5",
@@ -97,12 +97,12 @@
   },
   {
     "id": "q9",
-    "text": "K čemu slouží termální pasta?",
+    "text": "K čemu slouží teplovodivá pasta?",
     "options": {
       "A": "Zvyšuje výkon CPU",
       "B": "Zlepšuje přenos tepla mezi CPU a chladičem",
-      "C": "Chrání RAM",
-      "D": "Zvyšuje napětí"
+      "C": "Přilepuje procesor do patice",
+      "D": "Dokáže lehce zvýšit napětí na procesoru"
     },
     "correct": "B",
     "explanation": "Pasta vyplňuje mikroskopické nerovnosti a zlepšuje přenos tepla."
@@ -117,7 +117,7 @@
       "D": "VRAM"
     },
     "correct": "B",
-    "explanation": "Moderní systémy používají DDR4 nebo DDR5."
+    "explanation": "Moderní počítače používají DDR4 nebo DDR5."
   },
   {
     "id": "q11",
@@ -137,20 +137,20 @@
     "options": {
       "A": "Externí disk",
       "B": "Typ kabelu",
-      "C": "Interní SSD bez kabelů",
-      "D": "Typ RAM"
+      "C": "Interní SSD disk",
+      "D": "Typ paměti RAM"
     },
     "correct": "C",
-    "explanation": "M.2 SSD se zapojuje přímo do desky bez kabelů."
+    "explanation": "M.2 SSD se zapojuje přímo do desky bez použítí přídavné kabeláže."
   },
   {
     "id": "q13",
     "text": "Co se stane, když není zapojený CPU chladič?",
     "options": {
       "A": "Nic",
-      "B": "Počítač se zpomalí",
-      "C": "CPU se rychle přehřeje",
-      "D": "RAM nebude fungovat"
+      "B": "Počítač se po pár minutách práce zpomalí",
+      "C": "CPU se velice rychle přehřeje",
+      "D": "Počítač nepůjde spustit"
     },
     "correct": "C",
     "explanation": "Bez chlazení se CPU během sekund přehřeje."
@@ -171,12 +171,132 @@
     "id": "q15",
     "text": "Co znamená dual-channel u RAM?",
     "options": {
-      "A": "Použití dvou disků",
-      "B": "Použití dvou procesorů",
+      "A": "Čipy jsou na obou stranách RAM",
+      "B": "Použití dvou procesorů s jedním paměťovým modulem",
       "C": "Paralelní přístup ke dvěma modulům RAM",
-      "D": "Zvýšení napětí RAM"
+      "D": "Jedná se o paměťový modul, který je dvakrát rychlejší"
     },
     "correct": "C",
     "explanation": "Dual-channel umožňuje vyšší propustnost paměti."
-  }
+  },
+  {
+  "id": "q16",
+  "text": "Můžeme spustit počítač bez chladiče procesoru, pokud chceme pouze vstoupit do BIOSu?",
+  "options": {
+    "A": "Ano, protože BIOS nezatěžuje procesor",
+    "B": "Ano, ale jen u starších procesorů",
+    "C": "Ne, procesor se může velmi rychle přehřát i v BIOSu",
+    "D": "Ne, počítač se bez chladiče vůbec nespustí"
+  },
+  "correct": "C",
+  "explanation": "Procesor se zahřívá okamžitě po zapnutí, i bez zátěže. Moderní CPU sice mají ochrany, ale provoz bez chladiče je rizikový a může vést k přehřátí nebo vypnutí systému."
+},
+{
+  "id": "q17",
+  "text": "Co znamená u operační paměti označení Dual Rank?",
+  "options": {
+    "A": "Paměť má dva fyzické moduly v jednom balení",
+    "B": "Paměť obsahuje dva nezávislé bloky čipů, které může řadič střídavě využívat",
+    "C": "Paměť podporuje zapojení dual-channel",
+    "D": "Paměť má dvojnásobnou rychlost oproti běžné RAM"
+  },
+  "correct": "B",
+  "explanation": "Dual Rank znamená, že modul obsahuje dvě logické skupiny paměťových čipů (ranky), mezi kterými může řadič paměti přepínat, což může zlepšit efektivitu přístupu k datům."
+},
+{
+  "id": "q18",
+  "text": "Pokud máme doma základní desku pro paměťové moduly DDR5, ale k dispozici máme pouze moduly DDR4, tak...",
+  "options": {
+    "A": "Můžeme je bez problémů použít, DDR jsou zpětně kompatibilní",
+    "B": "Paměť bude fungovat, ale poběží sníženou rychlostí",
+    "C": "Paměť nepůjde ani fyzicky osadit do patice",
+    "D": "Jde použít, ale nedoporučuje se to, protože počítač nemusí být stabilní"
+  },
+  "correct": "C",
+  "explanation": "DDR4 a DDR5 moduly mají odlišné fyzické zářezy (keying), takže je nelze zaměnit ani vložit do nesprávného slotu."
+}, 
+{
+  "id": "q19",
+  "text": "Je nutné mít na operační paměti (RAM) chladič?",
+  "options": {
+    "A": "Ano, bez chladiče se  paměť do pár sekund přehřeje a může se i zničit",
+    "B": "Ano, ale pouze poukud používáme dual-channel",
+    "C": "Ne, u běžného použití není chladič nutný",
+    "D": "Ne, ale pouze pokud na ni použijeme teplovodivou pastu"
+  },
+  "correct": "C",
+  "explanation": "Většina běžných RAM modulů funguje bez chladiče bez problémů. Chladiče se využívají hlavně u výkonnějších nebo přetaktovaných modulů pro lepší odvod tepla."
+},
+{
+  "id": "q20",
+  "text": "Co se stane, když připojíme disk se sběrnicí SATA II k základní desce se sběrnicí SATA III?",
+  "options": {
+    "A": "Disk nebude fungovat kvůli nekompatibilitě",
+    "B": "Disk bude fungovat, ale rychlost bude omezena na SATA II",
+    "C": "Disk nepůjde zapojit, protože konektory jsou rozdílné",
+    "D": "Disk nebude fungovat a může se dokonce i poškodit kvůli vyššímu napájení"
+  },
+  "correct": "B",
+  "explanation": "Rozhraní SATA je zpětně kompatibilní. Disk SATA II bude fungovat i na SATA III portu, ale maximální rychlost bude omezena na standard SATA II."
+},
+{
+  "id": "q21",
+  "text": "Co se stane, když připojíme disk se sběrnicí SATA III k základní desce se sběrnicí SATA II?",
+  "options": {
+    "A": "Disk nebude fungovat kvůli nekompatibilitě",
+    "B": "Disk bude fungovat, ale rychlost bude omezena na SATA II",
+    "C": "Disk nepůjde zapojit, protože konektory jsou rozdílné",
+    "D": "Disk bude fungovat, ale bude jej nutné nejprve naformátovat"
+  },
+  "correct": "B",
+  "explanation": "Rozhraní SATA je zpětně kompatibilní. Disk SATA III bude fungovat i na SATA II portu, ale maximální rychlost bude omezena na standard SATA II."
+},
+{
+  "id": "q22",
+  "text": "Který z těchto způsobů byste použili při sestavování počítače k ochraně proti elektrostatickému výboji?",
+  "options": {
+    "A": "Pracovat na koberci, který nás izoluje od země a mít na sobě pouze oblečení z materiálu PES",
+    "B": "Použít antistatický náramek nebo se pravidelně dotýkat uzemněného kovového předmětu",
+    "C": "Před montáží si pořádně umýt ruce",
+    "D": "Použít gumové rukavice"
+  },
+  "correct": "B",
+  "explanation": "Elektrostatický výboj může poškodit citlivé komponenty. Použití antistatického náramku nebo dotýkání se uzemněného kovového předmětu pomáhá vyrovnat elektrický potenciál a snižuje riziko poškození."
+},
+{
+  "id": "q23",
+  "text": "Co se stane, pokud při sestavení počítače zapomeneme zapojit instalované RGB osvětlení?",
+  "options": {
+    "A": "Počítač se nespustí",
+    "B": "Počítač se spustí, ale RGB osvětlení nebude fungovat",
+    "C": "Počítač se může poškodit, instalované RGB musí být vždy zapojeno",
+    "D": "Ventilátory se nebudou točit"
+  },
+  "correct": "B",
+  "explanation": "RGB osvětlení není nutné pro funkci počítače. Pokud není zapojené, počítač bude fungovat normálně, pouze nebude svítit."
+},
+{
+  "id": "q24",
+  "text": "Máme na základní desce jeden M.2 slot a ten je již obsazený. Lze k základní desce připojit další SSD M.2 disk?",
+  "options": {
+    "A": "Ne, další M.2 disk nelze nijak připojit. Základní deska technicky nepodporuje více M.2 disků, než je počet slotů na desce.",
+    "B": "Ano, pomocí redukce, pokud máme volný PCI Express slot",
+    "C": "Ano, můžeme jej připojit do SATA konektoru, ale disk bude fungovat sníženou rychlostí",
+    "D": "Ano, můžeme jej připojit do SATA konektoru, ale pouze pokud základní deska podporuje SATA III"
+  },
+  "correct": "B",
+  "explanation": "Další M.2 SSD lze připojit pomocí adaptéru do PCI Express slotu. Přímé připojení bez volného M.2 slotu ale možné není."
+},
+{
+  "id": "q25",
+  "text": "Jakým způsobem zajistíme napájení M.2 SSD disku?",
+  "options": {
+    "A": "Samostatným napájecím kabelem ze zdroje",
+    "B": "Přes SATA napájecí konektor",
+    "C": "Není potřeba připojovat žádné další napájení. Disk bude napájen přímo přes M.2 slot na základní desce",
+    "D": "Propojíme napájecí kabel mezi diskem a základní deskou"
+  },
+  "correct": "C",
+  "explanation": "M.2 SSD disk je napájen přímo přes M.2 slot na základní desce, takže nevyžaduje žádné samostatné napájení."
+}
 ]
