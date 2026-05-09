@@ -3,33 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Výukové video | Multimediální průvodce základů hardware</title>
-  <meta name="description" content="Výukové video montáže počítače krok za krokem včetně doporučeného postupu a kontrolních bodů." />
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <title>Název stránky | Multimediální průvodce základů hardware</title>
+  <meta name="description" content="Krátký popis konkrétní stránky." />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
 <body>
-  <!--<a class="skip-link" href="#obsah">Přeskočit na obsah</a> -->
 
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">
-        <h1 class="site-title">Multimediální průvodce základů hardware</h1>
-        <p class="site-subtitle">Výukové video montáže počítače krok za krokem.</p>
-      </div>
+<div id="header"></div>
 
-      <nav class="site-nav" aria-label="Hlavní navigace">
-        <a href="index.html">Úvod</a>
-        <a href="video.html" aria-current="page">Video</a>
-        <a href="materialy.html">Materiály</a>
-        <a href="kviz.html">Kvíz</a>
-        <a href="katalog.html">Katalog</a>
-        <a href="o-projektu.html">O projektu</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="obsah" class="site-main">
+ <main id="obsah" class="site-main">
     <div class="container">
       <section class="card">
         <h2>Výukové video: montáž počítače</h2>
@@ -40,16 +25,12 @@
  </section>
 <div class="video-full">
   <iframe
-    src="https://www.youtube-nocookie.com/embed/7PFTYyDTBXE"
+    src="https://www.youtube-nocookie.com/embed/ucXCWgPMOjg"
     title="Výukové video – montáž PC"
     loading="lazy"
     allowfullscreen>
   </iframe>
 </div>
-
-        <p class="muted">
-          Pokud se video nenačte, zkontroluj přístupová práva (neveřejné/nezalistované) a správné ID videa.
-        </p>
      
 
       <section class="card" style="margin-top: 22px;">
@@ -89,12 +70,24 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Multimediální průvodce základů hardware</p>
-    </div>
-  </footer>
+<div id="footer"></div>
 
-  <script src="assets/js/main.js"></script>
+<script src="../assets/js/include.js"></script>
+<script>
+async function loadLayout(){
+  await includeHTML("header", "../components/header.html");
+  await includeHTML("footer", "../components/footer.html");
+
+  markActiveNav();
+
+  const year = document.getElementById("year");
+  if(year){
+    year.textContent = new Date().getFullYear();
+  }
+}
+
+loadLayout();
+</script>
+
 </body>
 </html>

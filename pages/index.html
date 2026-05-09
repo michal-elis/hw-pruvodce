@@ -3,82 +3,64 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Multimediální průvodce základů hardware</title>
-  <meta name="description" content="Multimediální průvodce základů PC hardwaru: video montáže, materiály, kvíz a katalog komponent." />
+
+  <title>Název stránky | Multimediální průvodce základů hardware</title>
+  <meta name="description" content="Krátký popis konkrétní stránky." />
+
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
 <body>
 
+<div id="header"></div>
 
-
-
-  <header class="site-header">
-  <div class="container header-row">
-
-    <div class="brand">
-      <h1 class="site-title">Multimediální průvodce základů hardware</h1>
-      <p class="site-subtitle">web k výukovému videu, materiálům a kvízu.</p>
-    </div>
-
-    <img src="../assets/img/logo.png" alt="Logo projektu" class="header-logo">
-
-  </div>
-
+<main id="obsah" class="site-main">
   <div class="container">
-    <nav class="site-nav" aria-label="Hlavní navigace">
-      <a href="pages/index.html" aria-current="page">Úvod</a>
-      <a href="pages/video.html">Video</a>
-      <a href="pages/materialy.html">Materiály</a>
-      <a href="pages/kviz.html">Kvíz</a>
-      <a href="pages/katalog.html">Katalog</a>
-      <a href="pages/o-projektu.html">O projektu</a>
-    </nav>
+
+    <section class="card">
+     
+  <h2>Vítejte na webu o počítačovém hardwaru</h2>
+
+  <p>
+    Vítejte na stránkách věnovaných počítačovému hardwaru a stavbě vlastního PC.
+    Najdete tady přehled základních hardwarových komponent, jejich funkce i tipy,
+    na co si dát při výběru pozor. Součástí webu je také návod, jak si v domácích
+    podmínkách krok za krokem sestavit vlastní počítač.
+  </p>
+
+  <p>
+    K dispozici je i výukové video, ve kterém si ukážeme celý proces montáže
+    počítače od přípravy komponent až po první spuštění sestavy. Jednotlivé kroky
+    jsou vysvětlené jednoduše a prakticky tak, aby je zvládl i začátečník.
+  </p>
+
+  <p>
+    Svoje znalosti si můžete ověřit v interaktivním kvízu nebo pomocí pracovních
+    listů, abyste se dozvěděli, co všechno jste se naučili.
+  </p>
+    </section>
+
   </div>
-</header>
+</main>
 
-  <main id="obsah" class="site-main">
-    <div class="container">
-      <section class="card">
-        <h2>Co tu najdeš</h2>
-        <ul>
-          <li>Výukové video montáže počítače (embed)</li>
-          <li>Studijní materiály ke stažení (PDF)</li>
-          <li>Interaktivní kvíz s okamžitým vyhodnocením</li>
-          <li>Katalog současného hardwaru</li>
-        </ul>
-      </section>
+<div id="footer"></div>
 
-      <section class="grid">
-        <a class="tile" href="video.html">
-          <h3>Výukové video</h3>
-          <p>Kroková montáž PC + titulky.</p>
-        </a>
+<script src="../assets/js/include.js"></script>
+<script>
+async function loadLayout(){
+  await includeHTML("header", "../components/header.html");
+  await includeHTML("footer", "../components/footer.html");
 
-        <a class="tile" href="materialy.html">
-          <h3>Materiály</h3>
-          <p>PDF pracovní listy a taháky.</p>
-        </a>
+  markActiveNav();
 
-        <a class="tile" href="kviz.html">
-          <h3>Kvíz</h3>
-          <p>Ověření znalostí ihned po vyplnění.</p>
-        </a>
+  const year = document.getElementById("year");
+  if(year){
+    year.textContent = new Date().getFullYear();
+  }
+}
 
-        <a class="tile" href="katalog.html">
-          <h3>Katalog hardware</h3>
-          <p>Přehled komponent a pojmů.</p>
-        </a>
-      </section>
-    </div>
-  </main>
+loadLayout();
+</script>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Multimediální průvodce základů hardware</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
