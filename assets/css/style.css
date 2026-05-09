@@ -11,7 +11,7 @@
   --nav: #172033;
 
   --radius: 16px;
-  --max: 1040px;
+  --max: 1140px;
 }
 
 *{
@@ -66,6 +66,21 @@ a{
 .container{
   width: min(100% - 40px, var(--max));
   margin: 0 auto;
+}
+
+.tile{
+  padding: 28px 24px;
+  min-height: 150px;
+  text-align: center;
+}
+
+.component-tile{
+  text-align: center;
+}
+
+.tile-icon{
+  font-size: 42px;
+  margin-bottom: 14px;
 }
 
 /* ===== HEADER ===== */
@@ -164,7 +179,7 @@ a{
 /* ===== MAIN ===== */
 
 .site-main{
-  padding: 56px 0 78px;
+  padding: 34px 0 78px;
   flex: 1;
 }
 

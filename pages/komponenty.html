@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Komponenty | Multimediální průvodce základů hardware</title>
+  <meta name="description" content="Rozcestník základních komponent osobního počítače." />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<main id="obsah" class="site-main">
+  <div class="container">
+
+    <section class="card">
+      <h2>Základní komponenty počítače</h2>
+      <p>
+        Tato část webu slouží jako rozcestník k hlavním hardwarovým komponentám
+        osobního počítače. U každé komponenty najdete její funkci, základní princip činnosti
+        a praktické informace a tipy důležité při výběru nebo montáži počítače.
+      </p>
+    </section>
+
+    <section class="grid">
+      <a class="tile" href="zakladni-deska.html">
+        <h3>Základní deska</h3>
+        <p>Hlavní deska počítače, která propojuje ostatní komponenty.</p>
+      </a>
+
+      <a class="tile" href="procesor.html">
+        <h3>Procesor</h3>
+        <p>Výpočetní jednotka, která zpracovává instrukce programů.</p>
+      </a>
+
+      <a class="tile" href="operacni-pamet.html">
+        <h3>Operační paměť</h3>
+        <p>Dočasná paměť používaná při běhu systému a aplikací.</p>
+      </a>
+
+      <a class="tile" href="graficka-karta.html">
+        <h3>Grafická karta</h3>
+        <p>Komponenta určená ke zpracování a vykreslování obrazu.</p>
+      </a>
+
+      <a class="tile" href="uloziste.html">
+        <h3>Úložiště</h3>
+        <p>SSD a HDD disky sloužící k trvalému ukládání dat.</p>
+      </a>
+
+      <a class="tile" href="zdroj.html">
+        <h3>Napájecí zdroj</h3>
+        <p>Dodává elektrickou energii jednotlivým částem počítače.</p>
+      </a>
+
+      <a class="tile" href="skrin.html">
+        <h3>Počítačová skříň</h3>
+        <p>Zajišťuje mechanické uložení komponent a proudění vzduchu.</p>
+      </a>
+
+      <a class="tile" href="chlazeni.html">
+        <h3>Chlazení</h3>
+        <p>Odvádí teplo z komponent a pomáhá udržet stabilní provoz.</p>
+      </a>
+    </section>
+
+  </div>
+</main>
+
+<div id="footer"></div>
+
+<script src="../assets/js/include.js"></script>
+<script>
+async function loadLayout(){
+  await includeHTML("header", "../components/header.html");
+  await includeHTML("footer", "../components/footer.html");
+
+  markActiveNav();
+
+  const year = document.getElementById("year");
+  if(year){
+    year.textContent = new Date().getFullYear();
+  }
+}
+
+loadLayout();
+</script>
+
+</body>
+</html>
