@@ -207,6 +207,10 @@ a{
   position: relative;
 }
 
+.card + .card{
+  margin-top: 32px;
+}
+
 .stack{
   margin-top: 22px;
 }
@@ -225,7 +229,7 @@ h2{
 }
 
 .card p{
-  max-width: 900px;
+  max-width: none;
 }
 
 /* ===== GRID / TILES ===== */
