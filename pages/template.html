@@ -1,61 +1,54 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Název stránky | Multimediální průvodce hardwarem</title>
-  <meta name="description" content="Krátký popis konkrétní stránky." />
-  <link rel="icon" type="image/png" href="../assets/img/ico.png" />
+    <title>Název stránky | Multimediální průvodce hardwarem</title>
+    <meta name="description" content="Krátký popis konkrétní stránky." />
+    <link rel="icon" type="image/png" href="../assets/img/ico.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
+  <body>
+    <div id="header"></div>
 
-<body>
+    <main id="obsah" class="site-main">
+      <div class="container">
+        <section class="card">
+          <h2>Nadpis stránky</h2>
+          <p>Úvodní text stránky.</p>
+        </section>
+      </div>
+    </main>
 
-<div id="header"></div>
+    <div id="footer"></div>
 
-<main id="obsah" class="site-main">
-  <div class="container">
+    <script src="../assets/js/include.js"></script>
+    <script>
+      async function loadLayout() {
+        await includeHTML("header", "../components/header.html");
+        await includeHTML("footer", "../components/footer.html");
 
-    <section class="card">
-      <h2>Nadpis stránky</h2>
-      <p>
-        Úvodní text stránky.
-      </p>
-    </section>
+        markActiveNav();
+        initMobileNav();
 
-  </div>
-</main>
+        const year = document.getElementById("year");
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      }
 
-<div id="footer"></div>
-
-<script src="../assets/js/include.js"></script>
-<script>
-async function loadLayout(){
-  await includeHTML("header", "../components/header.html");
-  await includeHTML("footer", "../components/footer.html");
-
-  markActiveNav();
-  initMobileNav();
-
-  const year = document.getElementById("year");
-  if(year){
-    year.textContent = new Date().getFullYear();
-  }
-}
-
-loadLayout();
-</script>
-
-</body>
+      loadLayout();
+    </script>
+  </body>
 </html>

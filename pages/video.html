@@ -1,85 +1,83 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Video "Jak se staví počítač" | Multimediální průvodce hardwarem</title>
-  <meta name="description" content="Výukové video krokové montáže počítače včetně komentáře, titulků a vysvětlení jednotlivých kroků." />
-  <link rel="icon" type="image/png" href="../assets/img/ico.png" />
+    <title>
+      Video "Jak se staví počítač" | Multimediální průvodce hardwarem
+    </title>
+    <meta
+      name="description"
+      content="Výukové video krokové montáže počítače včetně komentáře, titulků a vysvětlení jednotlivých kroků."
+    />
+    <link rel="icon" type="image/png" href="../assets/img/ico.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
+  <body>
+    <div id="header"></div>
 
-<body>
+    <main id="obsah" class="site-main">
+      <div class="container">
+        <section class="card">
+          <h2>Výukové video: Jak se staví počítač</h2>
+          <p>
+            Video ukazuje správný postup montáže PC a upozorňuje na typické
+            chyby, kterých se může začátečník dopustit. Provede Vás po
+            jednotlivých krocích od vybalení komponent až po první spuštění
+            hotové sestavy.
+          </p>
+        </section>
+        <div class="video-full">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/ucXCWgPMOjg"
+            title="Výukové video – montáž PC"
+            loading="lazy"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
 
-<div id="header"></div>
+        <section class="card" style="margin-top: 22px">
+          <h3>Líbilo se vám video?</h3>
+          <p>
+            Po shlédnutí videa si můžete porojít
+            <a href="kviz.html">kvíz</a> nebo
+            <a href="ke_stazeni.html">pracovní listy</a>
+            a ověřit si své znalosti.
+          </p>
+        </section>
+      </div>
+    </main>
 
-<main id="obsah" class="site-main">
-    <div class="container">
-      <section class="card">
-        <h2>Výukové video: Jak se staví počítač</h2>
-        <p>
-          Video ukazuje správný postup montáže PC a upozorňuje na typické chyby, kterých se může začátečník dopustit. Provede
-          Vás po jednotlivých krocích od vybalení komponent až po první spuštění hotové sestavy.
-        </p>
-        
- </section>
-<div class="video-full">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/ucXCWgPMOjg"
-    title="Výukové video – montáž PC"
-    loading="lazy"
-    allowfullscreen>
-  </iframe>
-</div>
-     
+    <div id="footer"></div>
 
-      <section class="card" style="margin-top: 22px;">
-        <h3>Líbilo se vám video?</h3>
-        <p>
-        Po shlédnutí videa si můžete porojít <a href="kviz.html">kvíz</a> nebo  <a href="ke_stazeni.html">pracovní listy</a> 
-        a ověřit si své znalosti.
-        </p>
-      </section>
+    <script src="../assets/js/include.js"></script>
+    <script>
+      async function loadLayout() {
+        await includeHTML("header", "../components/header.html");
+        await includeHTML("footer", "../components/footer.html");
 
+        markActiveNav();
+        initMobileNav();
 
+        const year = document.getElementById("year");
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      }
 
-
-    </div>
-</main>
-
-<div id="footer"></div>
-
-<script src="../assets/js/include.js"></script>
-<script>
-async function loadLayout(){
-  await includeHTML("header", "../components/header.html");
-  await includeHTML("footer", "../components/footer.html");
-
-  markActiveNav();
-  initMobileNav();
-
-  const year = document.getElementById("year");
-  if(year){
-    year.textContent = new Date().getFullYear();
-  }
-}
-
-loadLayout();
-</script>
-
-</body>
+      loadLayout();
+    </script>
+  </body>
 </html>
-
-
-

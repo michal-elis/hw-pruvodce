@@ -1,76 +1,73 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Kvíz | Multimediální průvodce základů hardware</title>
-  <meta name="description" content="Interaktivní kvíz pro ověření znalostí z oblasti počítačového hardwaru a montáže počítače." />
+    <title>Kvíz | Multimediální průvodce základů hardware</title>
+    <meta
+      name="description"
+      content="Interaktivní kvíz pro ověření znalostí z oblasti počítačového hardwaru a montáže počítače."
+    />
 
-  <link rel="icon" type="image/png" href="../assets/img/ico.png" />
+    <link rel="icon" type="image/png" href="../assets/img/ico.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
+  <body>
+    <div id="header"></div>
 
-<body>
+    <main id="obsah" class="site-main">
+      <div class="container">
+        <section class="card">
+          <h2>Kvíz</h2>
+          <p class="muted">
+            Vyber odpověď. Kvíz ji ihned vyhodnotí a ukáže stručné vysvětlení.
+          </p>
 
-<div id="header"></div>
+          <div class="quiz-top">
+            <div id="quizProgress" class="muted">0 / 0</div>
+            <div id="quizScore" class="muted">Skóre: 0</div>
+            <button id="quizReset" class="btn" type="button">Reset</button>
+          </div>
 
-  <main id="obsah" class="site-main">
-    <div class="container">
-      <section class="card">
-        <h2>Kvíz</h2>
-        <p class="muted">
-          Vyber odpověď. Kvíz ji ihned vyhodnotí a ukáže stručné vysvětlení.
-        </p>
+          <div id="quizRoot" class="quiz-root" aria-live="polite"></div>
 
-        <div class="quiz-top">
-          <div id="quizProgress" class="muted">0 / 0</div>
-          <div id="quizScore" class="muted">Skóre: 0</div>
-          <button id="quizReset" class="btn" type="button">Reset</button>
-        </div>
+          <div id="quizSummary" class="quiz-summary" hidden></div>
+        </section>
+      </div>
+    </main>
 
-        <div id="quizRoot" class="quiz-root" aria-live="polite"></div>
+    <div id="footer"></div>
 
-        <div id="quizSummary" class="quiz-summary" hidden></div>
-      </section>
-    </div>
-  </main>
+    <script src="../assets/js/include.js"></script>
+    <script>
+      async function loadLayout() {
+        await includeHTML("header", "../components/header.html");
+        await includeHTML("footer", "../components/footer.html");
 
-<div id="footer"></div>
+        markActiveNav();
+        initMobileNav();
 
-<script src="../assets/js/include.js"></script>
-<script>
-async function loadLayout(){
-  await includeHTML("header", "../components/header.html");
-  await includeHTML("footer", "../components/footer.html");
+        const year = document.getElementById("year");
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      }
 
-  markActiveNav();
-  initMobileNav();
+      loadLayout();
+    </script>
 
-  const year = document.getElementById("year");
-  if(year){
-    year.textContent = new Date().getFullYear();
-  }
-}
-
-loadLayout();
-</script>
-
-  <script src="../assets/js/include.js"></script>
-  <script src="../assets/js/kviz.js"></script>
-</body>
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/kviz.js"></script>
+  </body>
 </html>
-
-
-
- 

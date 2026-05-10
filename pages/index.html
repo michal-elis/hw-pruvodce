@@ -1,76 +1,76 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Úvod | Multimediální průvodce hardwarem</title>
-  <meta name="description" content="Multimediální průvodce základů hardware. Výuková videa, pracovní listy, kvíz a návody ke stavbě počítače." />
-  <link rel="icon" type="image/png" href="../assets/img/ico.png" />
+    <title>Úvod | Multimediální průvodce hardwarem</title>
+    <meta
+      name="description"
+      content="Multimediální průvodce základů hardware. Výuková videa, pracovní listy, kvíz a návody ke stavbě počítače."
+    />
+    <link rel="icon" type="image/png" href="../assets/img/ico.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
+  <body>
+    <div id="header"></div>
 
-<body>
+    <main id="obsah" class="site-main">
+      <div class="container">
+        <section class="card">
+          <h2>Vítejte na webu o počítačovém hardwaru</h2>
 
-<div id="header"></div>
+          <p>
+            Vítejte na stránkách věnovaných počítačovému hardwaru a stavbě
+            vlastního PC. Najdete tady přehled základních hardwarových
+            komponent, jejich funkce i tipy, na co si dát při výběru pozor.
+            Součástí webu je také návod, jak si v domácích podmínkách krok za
+            krokem sestavit vlastní počítač.
+          </p>
 
-<main id="obsah" class="site-main">
-  <div class="container">
+          <p>
+            K dispozici je i výukové video, ve kterém si ukážeme celý proces
+            montáže počítače od přípravy komponent až po první spuštění sestavy.
+            Jednotlivé kroky jsou vysvětlené jednoduše a prakticky tak, aby je
+            zvládl i začátečník.
+          </p>
 
-    <section class="card">
-     <h2>Vítejte na webu o počítačovém hardwaru</h2>
+          <p>
+            Svoje znalosti si můžete ověřit v interaktivním kvízu nebo pomocí
+            pracovních listů, abyste se dozvěděli, co všechno jste se naučili.
+          </p>
+        </section>
+      </div>
+    </main>
 
-  <p>
-    Vítejte na stránkách věnovaných počítačovému hardwaru a stavbě vlastního PC.
-    Najdete tady přehled základních hardwarových komponent, jejich funkce i tipy,
-    na co si dát při výběru pozor. Součástí webu je také návod, jak si v domácích
-    podmínkách krok za krokem sestavit vlastní počítač.
-  </p>
+    <div id="footer"></div>
 
-  <p>
-    K dispozici je i výukové video, ve kterém si ukážeme celý proces montáže
-    počítače od přípravy komponent až po první spuštění sestavy. Jednotlivé kroky
-    jsou vysvětlené jednoduše a prakticky tak, aby je zvládl i začátečník.
-  </p>
+    <script src="../assets/js/include.js"></script>
+    <script>
+      async function loadLayout() {
+        await includeHTML("header", "../components/header.html");
+        await includeHTML("footer", "../components/footer.html");
 
-  <p>
-    Svoje znalosti si můžete ověřit v interaktivním kvízu nebo pomocí pracovních
-    listů, abyste se dozvěděli, co všechno jste se naučili.
-  </p>
-    </section>
+        markActiveNav();
+        initMobileNav();
 
-  </div>
-</main>
+        const year = document.getElementById("year");
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      }
 
-<div id="footer"></div>
-
-<script src="../assets/js/include.js"></script>
-<script>
-async function loadLayout(){
-  await includeHTML("header", "../components/header.html");
-  await includeHTML("footer", "../components/footer.html");
-
-  markActiveNav();
-  initMobileNav();
-
-  const year = document.getElementById("year");
-  if(year){
-    year.textContent = new Date().getFullYear();
-  }
-}
-
-loadLayout();
-</script>
-
-</body>
+      loadLayout();
+    </script>
+  </body>
 </html>

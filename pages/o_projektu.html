@@ -1,76 +1,73 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Název stránky | Multimediální průvodce základů hardware</title>
-  <meta name="description" content="Krátký popis konkrétní stránky." />
+    <title>Název stránky | Multimediální průvodce základů hardware</title>
+    <meta name="description" content="Krátký popis konkrétní stránky." />
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
+    <div id="header"></div>
 
-<div id="header"></div>
+    <main id="obsah" class="site-main">
+      <div class="container">
+        <section class="card">
+          <h2>O projektu</h2>
 
-<main id="obsah" class="site-main">
-  <div class="container">
+          <p>
+            Tento web vznikl jako součást bakalářské práce zaměřené na základy
+            počítačového hardwaru a praktickou montáž počítače. Cílem projektu
+            bylo vytvořit jednoduchý a srozumitelný materiál, který pomůže
+            začátečníkům lépe pochopit jednotlivé komponenty počítače a naučit
+            se základní principy sestavení vlastní PC sestavy.
+          </p>
 
-    <section class="card">
-   
-  <h2>O projektu</h2>
+          <p>
+            Součástí projektu je výukové video montáže počítače, ve kterém jsou
+            krok za krokem ukázány jednotlivé části sestavení počítače – od
+            přípravy komponent až po první spuštění systému. Video doplňuje
+            audiokomentář a titulky, aby byl obsah co nejlépe přístupný i pro
+            začínající uživatele.
+          </p>
 
-  <p>
-    Tento web vznikl jako součást bakalářské práce zaměřené na základy počítačového
-    hardwaru a praktickou montáž počítače. Cílem projektu bylo vytvořit jednoduchý
-    a srozumitelný materiál, který pomůže začátečníkům lépe pochopit jednotlivé
-    komponenty počítače a naučit se základní principy sestavení vlastní PC sestavy.
-  </p>
+          <p>
+            Kromě videa web obsahuje také popis základních hardwarových
+            komponent, interaktivní kvíz, pracovní listy a katalog současného
+            hardwaru. Cílem nebylo vytvořit pouze teoretický přehled, ale hlavně
+            praktického průvodce, který uživateli ukáže, že sestavení vlastního
+            počítače nemusí být tak složité, jak se může na první pohled zdát.
+          </p>
 
-  <p>
-    Součástí projektu je výukové video montáže počítače, ve kterém jsou krok za
-    krokem ukázány jednotlivé části sestavení počítače – od přípravy komponent až
-    po první spuštění systému. Video doplňuje audiokomentář a titulky, aby byl
-    obsah co nejlépe přístupný i pro začínající uživatele.
-  </p>
+          <p>
+            Projekt je určen především studentům, začátečníkům a všem, kteří se
+            chtějí o počítačovém hardwaru dozvědět více praktickou a
+            srozumitelnou formou.
+          </p>
+        </section>
+      </div>
+    </main>
 
-  <p>
-    Kromě videa web obsahuje také popis základních hardwarových komponent,
-    interaktivní kvíz, pracovní listy a katalog současného hardwaru. Cílem nebylo
-    vytvořit pouze teoretický přehled, ale hlavně praktického průvodce, který
-    uživateli ukáže, že sestavení vlastního počítače nemusí být tak složité,
-    jak se může na první pohled zdát.
-  </p>
+    <div id="footer"></div>
 
-  <p>
-    Projekt je určen především studentům, začátečníkům a všem, kteří se chtějí
-    o počítačovém hardwaru dozvědět více praktickou a srozumitelnou formou.
-  </p>
+    <script src="../assets/js/include.js"></script>
+    <script>
+      async function loadLayout() {
+        await includeHTML("header", "../components/header.html");
+        await includeHTML("footer", "../components/footer.html");
 
-    </section>
+        markActiveNav();
 
-  </div>
-</main>
+        const year = document.getElementById("year");
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      }
 
-<div id="footer"></div>
-
-<script src="../assets/js/include.js"></script>
-<script>
-async function loadLayout(){
-  await includeHTML("header", "../components/header.html");
-  await includeHTML("footer", "../components/footer.html");
-
-  markActiveNav();
-
-  const year = document.getElementById("year");
-  if(year){
-    year.textContent = new Date().getFullYear();
-  }
-}
-
-loadLayout();
-</script>
-
-</body>
+      loadLayout();
+    </script>
+  </body>
 </html>
