@@ -5,11 +5,11 @@
     "options": {
       "A": "Molex",
       "B": "SATA Power",
-      "C": "4/8pin EPS",
+      "C": "4+4pin EPS",
       "D": "PCIe 6pin"
     },
     "correct": "C",
-    "explanation": "Procesor je napájen přes 4/8pin EPS konektor, nikoli přes hlavní 24pin."
+    "explanation": "Procesor je napájen přes 4+4pin EPS konektor, nikoli přes hlavní 24pin."
   },
   {
     "id": "q2",
@@ -18,7 +18,7 @@
       "A": "Počítač bude fungovat normálně",
       "B": "Grafická karta nebude mít výkon",
       "C": "Počítač se často nespustí nebo zobrazí chybu",
-      "D": "Zvýší se hlučnost ventilátorů"
+      "D": "Sníží se bitová hloubka barev a rozlišení"
     },
     "correct": "C",
     "explanation": "Moderní GPU bez napájení často nenaběhne nebo zobrazí chybu."
@@ -87,13 +87,13 @@
     "id": "q8",
     "text": "Co je potřeba před instalací procesoru zkontrolovat?",
     "options": {
-      "A": "Barvu základní desky",
-      "B": "Kompatibilitu socketu",
-      "C": "Velikost ventilátoru",
-      "D": "Počet USB portů"
+      "A": "připojení napájecího EPS konektoru",
+      "B": "Správnou orientaci vzhledem k socketu",
+      "C": "Že je k procesoru připevněný chladič",
+      "D": "Nanesení teplovodivé pasty na socket"
     },
     "correct": "B",
-    "explanation": "Procesor musí odpovídat socketu základní desky."
+    "explanation": "Procesor musí být správně orientován dle šipek na hraně socketu a procesoru."
   },
   {
     "id": "q9",
@@ -102,7 +102,7 @@
       "A": "Zvyšuje výkon CPU",
       "B": "Zlepšuje přenos tepla mezi CPU a chladičem",
       "C": "Přilepuje procesor do patice",
-      "D": "Dokáže lehce zvýšit napětí na procesoru"
+      "D": "Jedná se pouze o designový prvek"
     },
     "correct": "B",
     "explanation": "Pasta vyplňuje mikroskopické nerovnosti a zlepšuje přenos tepla."
@@ -111,10 +111,10 @@
     "id": "q10",
     "text": "Jaký typ paměti se používá v moderních PC?",
     "options": {
-      "A": "DDR",
+      "A": "ECC UDIMM",
       "B": "DDR4/DDR5",
-      "C": "SDRAM",
-      "D": "VRAM"
+      "C": "RDIMM",
+      "D": "NVDIMM"
     },
     "correct": "B",
     "explanation": "Moderní počítače používají DDR4 nebo DDR5."
@@ -136,19 +136,19 @@
     "text": "Co je M.2 SSD?",
     "options": {
       "A": "Externí disk",
-      "B": "Typ kabelu",
+      "B": "Typ kabelu pro SSD disky",
       "C": "Interní SSD disk",
-      "D": "Typ paměti RAM"
+      "D": "Typ paměti SSD RAM"
     },
     "correct": "C",
-    "explanation": "M.2 SSD se zapojuje přímo do desky bez použítí přídavné kabeláže."
+    "explanation": "M.2 SSD je interní disk, který se zapojuje přímo do desky bez použítí přídavné kabeláže."
   },
   {
     "id": "q13",
     "text": "Co se stane, když není zapojený CPU chladič?",
     "options": {
       "A": "Nic",
-      "B": "Počítač se po pár minutách práce zpomalí",
+      "B": "Počítač se po pár hodinách práce zpomalí",
       "C": "CPU se velice rychle přehřeje",
       "D": "Počítač nepůjde spustit"
     },
@@ -186,7 +186,7 @@
     "A": "Ano, protože BIOS nezatěžuje procesor",
     "B": "Ano, ale jen u starších procesorů",
     "C": "Ne, procesor se může velmi rychle přehřát i v BIOSu",
-    "D": "Ne, počítač se bez chladiče vůbec nespustí"
+    "D": "Ne, protože počítač se bez chladiče vůbec nespustí"
   },
   "correct": "C",
   "explanation": "Procesor se zahřívá okamžitě po zapnutí, i bez zátěže. Moderní CPU sice mají ochrany, ale provoz bez chladiče je rizikový a může vést k přehřátí nebo vypnutí systému."
@@ -195,7 +195,7 @@
   "id": "q17",
   "text": "Co znamená u operační paměti označení Dual Rank?",
   "options": {
-    "A": "Paměť má dva fyzické moduly v jednom balení",
+    "A": "Paměť má dva fyzické moduly v jednom balení (např. 2x8 GB)",
     "B": "Paměť obsahuje dva nezávislé bloky čipů, které může řadič střídavě využívat",
     "C": "Paměť podporuje zapojení dual-channel",
     "D": "Paměť má dvojnásobnou rychlost oproti běžné RAM"
@@ -234,7 +234,7 @@
     "A": "Disk nebude fungovat kvůli nekompatibilitě",
     "B": "Disk bude fungovat, ale rychlost bude omezena na SATA II",
     "C": "Disk nepůjde zapojit, protože konektory jsou rozdílné",
-    "D": "Disk nebude fungovat a může se dokonce i poškodit kvůli vyššímu napájení"
+    "D": "Disk nebude fungovat a může se dokonce i poškodit kvůli vyššímu napětí"
   },
   "correct": "B",
   "explanation": "Rozhraní SATA je zpětně kompatibilní. Disk SATA II bude fungovat i na SATA III portu, ale maximální rychlost bude omezena na standard SATA II."
@@ -246,7 +246,7 @@
     "A": "Disk nebude fungovat kvůli nekompatibilitě",
     "B": "Disk bude fungovat, ale rychlost bude omezena na SATA II",
     "C": "Disk nepůjde zapojit, protože konektory jsou rozdílné",
-    "D": "Disk bude fungovat, ale bude jej nutné nejprve naformátovat"
+    "D": "Disk bude fungovat, ale bude jej nutné nejprve naformátovat na souborový systém SATA II"
   },
   "correct": "B",
   "explanation": "Rozhraní SATA je zpětně kompatibilní. Disk SATA III bude fungovat i na SATA II portu, ale maximální rychlost bude omezena na standard SATA II."
