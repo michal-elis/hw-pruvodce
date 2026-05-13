@@ -1,389 +1,370 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Úložiště - Komponenty | Multimediální průvodce hardwarem</title>
-  <meta name="description" content="Datová úložiště - SSD a HDD" />
-  <link rel="icon" type="image/png" href="../assets/img/ico.png" />
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
-
-<body>
-
-<div id="header"></div>
-
-<main id="obsah" class="site-main">
-  <div class="container">
-
-    <section class="card">
-<h2>Úložiště</h2>
-
-<p>
-  Úložiště slouží k trvalému ukládání dat v počítači. Na rozdíl od operační paměti
-  jde o nevolatilní paměť, takže data zůstávají zachovaná i po vypnutí počítače
-  nebo odpojení napájení.
-</p>
-
-<p>
-  Na úložišti je uložený operační systém, programy i uživatelská data.
-  Typ a rychlost použitého úložiště mají velký vliv na rychlost startu systému,
-  načítání aplikací i celkovou odezvu počítače.
-</p>
-
-<p>
-  V dnešních stolních počítačích se používají hlavně dva typy úložišť –
-  SSD (Solid-State Drive) a klasické pevné disky HDD. SSD mohou využívat
-  rozhraní SATA nebo PCI Express, zatímco běžné pevné disky používají pouze SATA.
-</p>
-
-<p>
-  V minulosti existovaly také takzvané SSHD disky, které kombinovaly klasický
-  plotnový disk s menší flash pamětí. Řadič disku do ní ukládal často používaná
-  data, což pomáhalo zrychlit například start operačního systému. Dnes už se
-  s SSHD disky setkáte spíše výjimečně ve starém notebooku.
-</p>
-
-<h3>SSD</h3>
-
-<p>
-  SSD (Solid State Drive) používá polovodičové paměťové čipy NAND flash
-  a neobsahuje žádné pohyblivé části. Díky tomu má velmi krátkou přístupovou
-  dobu, vysokou rychlost čtení a zápisu a zároveň je výrazně odolnější
-  proti otřesům než klasický pevný disk.
-  Právě kvůli rychlosti je dnes ideální instalovat operační systém na SSD.
-  Rozdíl oproti klasickému HDD bývá při běžném používání počítače velmi výrazný.
-  Nevýhodou SSD bývá vyšší cena za jednotku kapacity, omezený počet přepisů
-  paměťových buněk a horší možnost obnovy dat při selhání disku.
-</p>
-
-<h4>Hlavní parametry při výběru SSD disku</h4>
-
-<ul>
-  <li>
-    <strong>Rozhraní</strong><br>
-    SSD může používat rozhraní SATA nebo PCI Express. V moderním počítači
-    je dnes ideální SSD ve formátu M.2 s podporou NVMe na rozhraní
-    PCI Express 4.0 nebo 5.0, které nabízí výrazně vyšší rychlosti
-    než klasické SATA SSD. Cenový rozdíl už často není výrazný, takže výhody PCI Express obvykle
-    převažují. SATA SSD má stále smysl například při upgradu staršího počítače
-    bez M.2 slotu nebo pokud už jsou všechny M.2 sloty obsazené.
-    Existují také rozšiřující karty do PCI Express slotu, které umožňují
-    připojit jeden nebo více NVMe disků. Před použitím je ale dobré ověřit,
-    jestli z takové karty umí základní deska bootovat. Ne každý M.2 disk 
-    zároveň používá NVMe. Existují i M.2 SSD využívající SATA,
-    jejichž výkon je podobný klasickým 2,5" SATA SSD.
-  </li>
-</ul> 
-
-<ul>
-  <li>
-    <strong>Kapacita</strong><br>
-    U běžného stolního počítače se dnes kapacita SSD pohybuje od stovek GB
-    po jednotky TB. Vhodná velikost závisí hlavně na tom, jak bude počítač
-    používán.
-  </li>
-</ul> 
-
-<ul>
-  <li>
-    <strong>Rychlost čtení a zápisu</strong><br>
-    Výrobci často uvádějí hlavně sekvenční rychlosti čtení a zápisu,
-    které se u moderních NVMe disků pohybují v jednotkách GB/s.
-
-  Při běžném používání ale nejsou sekvenční rychlosti vždy nejdůležitější.
-  Velký vliv na skutečný pocit z rychlosti systému má hlavně náhodný přístup
-  k datům (random read/write), tedy práce s velkým množstvím malých souborů
-  uložených na různých místech disku.
-
-  Výkon náhodného přístupu bývá často vyjadřován pomocí IOPS
-  (Input/Output Operations Per Second), tedy počtem operací za sekundu.
-  Právě tento parametr výrazně ovlivňuje rychlost startu systému,
-  načítání aplikací nebo celkovou odezvu počítače.
-
-  Některé SSD disky obsahují vlastní DRAM cache, která slouží
-  jako rychlá paměť pro mapovací tabulky dat. Levnější modely mohou místo toho
-  využívat technologii Host Memory Buffer (HMB), která používá část
-  operační paměti počítače. Takové řešení je levnější, ale může mít nižší
-  výkon hlavně při náhodném přístupu k datům.
-
-  Následující obrázek ukazuje rychlosti SSD disku Kingston KC3000 1TB
-  na sběrnici PCIe 4.0. První dva řádky zobrazují sekvenční čtení a zápis
-  1 MB bloků dat. Druhé dva řádky pak rychlost práce se 4 kB bloky dat
-  při různých hloubkách fronty požadavků.
-
-</li>
-</ul>
-<ul>
-  <li>
-    <strong>Typ paměťových buněk</strong><br>
-    SSD ukládá data do NAND flash buněk. Každá buňka uchovává elektrický náboj,
-    který reprezentuje uloženou informaci. Podle počtu bitů uložených v jedné
-    buňce existuje několik typů pamětí.Typ buněk ovlivňuje rychlost, cenu i životnost SSD, protože každá buňka
-  zvládne pouze omezený počet přepisů.
-  </li>
-
-
-
-
-<ul>
-  <li>
-    <strong>SLC (Single Level Cell)</strong><br>
-    Do jedné buňky ukládá jeden bit. Nabízí extrémně vysokou rychlost
-    i životnost, ale kvůli ceně se v běžných počítačích prakticky nepoužívá.
-  </li>
-
-  <li>
-    <strong>MLC (Multi Level Cell)</strong><br>
-    Do jedné buňky ukládá dva bity. Nabízí vyšší kapacitu než SLC,
-    ale dnes se kvůli ceně používá hlavně v profesionální sféře.
-  </li>
-
-  <li>
-    <strong>TLC (Triple Level Cell)</strong><br>
-    Ukládá tři bity do jedné buňky. Dnes jde o nejběžnější typ pamětí
-    u spotřebitelských SSD disků. Nabízí dobrý poměr ceny, výkonu a životnosti.
-  </li>
-
-  <li>
-    <strong>QLC (Quad Level Cell)</strong><br>
-    Do jedné buňky ukládá čtyři bity. Používá se hlavně u levnějších SSD,
-    ale má nejnižší životnost a pomalejší zápis.
-  </li>
-</ul>
-<p>
-  Moderní SSD disky často využívají takzvanou SLC cache. Řadič při zápisu
-  do TLC nebo QLC buněk dočasně používá jednodušší režim se dvěma stavy,
-  čímž výrazně zrychlí zápis dat. Později se data při nižší zátěži přepíšou
-  standardním způsobem podle typu použité paměti.
-  U starších SSD měla SLC cache pevnou velikost. Novější disky často používají
-  dynamickou cache, která se mění podle volného místa na disku.
-</p>
-
-</ul>
-
-
-
-<ul>
-  <li>
-    <strong>Životnost disku (TBW)</strong><br>
-    Každá NAND flash buňka zvládne pouze omezený počet přepisů. Proto výrobci
-    uvádějí parametr TBW (Total Bytes Written), který vyjadřuje celkové množství
-    dat, které lze na disk zapsat během garantované životnosti.
-  Hodnota TBW se obvykle udává v terabajtech a závisí hlavně na typu buněk
-  a kapacitě disku. Obecně platí, že větší disky mají vyšší TBW, protože zápisy
-  lze rozložit mezi větší množství buněk.
-  SSD zároveň používají technologii wear leveling, která rovnoměrně rozděluje
-  zápisy mezi jednotlivé paměťové buňky a pomáhá prodlužovat životnost disku.
-  Při běžném domácím používání představuje TBW spíše teoretické omezení.
-  I levnější SSD totiž často zvládnou zapsat stovky terabajtů dat,
-  což odpovídá mnoha letům běžného provozu.
-</p>
- </li>
-</ul>
-
-
-<h3>HDD - Pevný disk</h3>
-
-<p>
-  HDD (Hard Disk Drive), tedy klasický pevný disk,
-  ukládá data na rotující magnetické plotny.
-  O čtení a zápis dat se stará pohyblivá hlava,
-  která se přesouvá nad povrchem ploten.
-  HDD obsahuje mechanické části,
-  což výrazně ovlivňuje jeho rychlost, hlučnost i odolnost vůči otřesům.
-  Přestože jsou dnes HDD postupně nahrazovány SSD disky,
-  stále dávají smysl jako sekundární úložiště pro větší množství dat.
-  Jejich hlavní výhodou zůstává vysoká kapacita
-  a velmi příznivá cena za gigabajt prostoru.
-</p>
-
-<h4>Hlavní parametry při výběru HDD</h4>
-
-<ul>
-  <li>
-    <strong>Kapacita</strong><br>
-    Moderní HDD se pohybují od jednotek až po nižší desítky TB.
-    Při výběru je dobré sledovat hlavně poměr ceny a kapacity.
-  </li>
-</ul>
-
-<ul>
-  <li>
-    <strong>Rozhraní</strong><br>
-    Dnes se téměř výhradně používá SATA.
-    Maximální rychlost SATA III je 6 Gb/s,
-    což je ale stále více, než běžný HDD dokáže využít.
-  </li>
-
-
-<p>
-  U použitých disků můžete narazit také na SAS disky,
-  které bývají velmi levné.
-  Tyto disky jsou ale určené hlavně pro servery
-  a bez speciálního SAS řadiče na běžné základní desce fungovat většinou nebudou.
-</p>
-</ul>
-<ul>
-  <li>
-    <strong>Rychlost otáček (RPM) a přístupová doba</strong><br>
-    Nejčastěji se dnes setkáte s disky o rychlosti 5400 RPM nebo 7200 RPM.
-  </li>
-
-
-<p>
-  Vyšší otáčky znamenají vyšší výkon,
-  ale také vyšší hlučnost, teplotu a spotřebu.
-</p>
-
-<p>
-  Přístupová doba HDD se skládá z přesunu čtecí hlavy
-  a čekání na otočení správného sektoru pod hlavu.
-</p>
-
-<p>
-  U 7200RPM disků bývá seek time přibližně kolem 8 ms
-  a rotační latence kolem 4 ms.
-  Oproti tomu SSD pracují v řádu mikrosekund.
-</p>
-</ul>
-<ul>
-  <li>
-    <strong>Rychlost čtení a zápisu</strong><br>
-    Moderní HDD dosahují přibližně 100–250 MB/s.
-    Skutečný výkon ale omezuje hlavně mechanická konstrukce disku.
-  </li>
-
-
-
-
-<p>
-  Další nevýhodou HDD může být spin-down režim.
-  Pokud je disk delší dobu nečinný,
-  může zastavit plotny kvůli úspoře energie.
-  Při dalším přístupu k datům se ale musí znovu roztočit,
-  což může způsobit několikasekundové zpoždění.
-</p>
-
-<p>
-  U HDD může docházet také k fragmentaci dat,
-  kdy jsou soubory uložené na více místech disku.
-  Čtecí hlava pak musí více přeskakovat,
-  což zpomaluje práci s daty.
-</p>
-
-<p>
-  Moderní HDD obsahují také vlastní cache paměť,
-  která slouží k ukládání často používaných dat.
-  Její velikost se dnes běžně pohybuje mezi 64 a 512 MB.
-</p>
-</ul>
-<ul>
-  <li>
-    <strong>Hlučnost</strong><br>
-    Hluk pevného disku vzniká otáčením ploten
-    i pohybem čtecích hlav.
-  Některé enterprise disky používají helium,
-  které snižuje odpor prostředí uvnitř disku
-  a pomáhá chlazení. Hlučnost HDD se běžně pohybuje kolem 20–30 dB.
-</li>
-</ul>
-
-<ul>
-  <li>
-    <strong>Formát</strong><br>
-    HDD se vyrábějí hlavně ve velikostech 3,5" a 2,5".
-    Ve stolních počítačích se nejčastěji používají 3,5" modely.
-  </li>
-</ul>
-
-<ul>
-  <li>
-    <strong>Technologie zápisu dat</strong>
-  </li>
-<ul>
-  <li>
-    <strong>CMR (Conventional Magnetic Recording)</strong><br>
-    Klasická technologie zápisu bez překrývání stop.
-    Nabízí stabilní výkon při čtení i zápisu.
-  </li>
-
-  <li>
-    <strong>SMR (Shingled Magnetic Recording)</strong><br>
-    Technologie, při které se jednotlivé stopy částečně překrývají.
-    Díky tomu lze zvýšit kapacitu disku.
-    Nevýhodou SMR je pomalejší přepis dat při častém zápisu.
-    Pro archivaci nebo běžné datové úložiště ale může být stále vhodnou volbou.
-  </li>
-
-
-  <li>
-    <strong>HAMR (Heat-Assisted Magnetic Recording)</strong><br>
-    Technologie využívající lokální zahřívání média laserem,
-    která umožňuje uložit více dat na menší plochu.
-  </li>
-
-  <li>
-    <strong>MAMR (Microwave-Assisted Magnetic Recording)</strong><br>
-    Technologie využívající mikrovlnné elektromagnetické pole
-    pro zlepšení zápisu dat.
-  </li>
-  </ul>
-</ul>
-
-<p>
-    
-<br>
-</p>
-
-<p>
-  Na fotografii níže je zleva vidět klasický 3,5" HDD,
-  menší 2,5" HDD, hybridní SSHD, 2,5" SSD a moderní M.2 SSD.
-  Pro zajímavost je na konci řady také starý MFM disk formátu 5,25"
-  s kapacitou 20 MB.
-  Moderní M.2 SSD vedle něj má kapacitu 2 TB,
-  tedy přibližně 100 000× více dat při výrazně menších rozměrech.
-</p>
-
-
-<div class="img-center">
-  <img src="../assets/img/disky.webp" alt="Nápisy a šipky na ventilátoru">
-</div>
-    </section>
-
-  </div>
-</main>
-
-<div id="footer"></div>
-
-<script src="../assets/js/include.js"></script>
-<script>
-async function loadLayout(){
-  await includeHTML("header", "../components/header.html");
-  await includeHTML("footer", "../components/footer.html");
-
-  markActiveNav();
-  initMobileNav();
-
-  const year = document.getElementById("year");
-  if(year){
-    year.textContent = new Date().getFullYear();
-  }
-}
-
-loadLayout();
-</script>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Úložiště - Komponenty | Multimediální průvodce hardwarem</title>
+    <meta name="description" content="Datová úložiště - SSD a HDD" />
+    <link rel="icon" type="image/png" href="../assets/img/ico.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <main id="obsah" class="site-main">
+      <div class="container">
+        <section class="card">
+          <h2>Úložiště</h2>
+
+          <p>
+            Úložiště slouží k trvalému ukládání dat v počítači. Na rozdíl od
+            operační paměti jde o nevolatilní paměť, takže data zůstávají
+            zachovaná i po vypnutí počítače nebo odpojení napájení.
+          </p>
+
+          <p>
+            Na úložišti je uložený operační systém, programy i uživatelská data.
+            Typ a rychlost použitého úložiště mají velký vliv na rychlost startu
+            systému, načítání aplikací i celkovou odezvu počítače.
+          </p>
+
+          <p>
+            V dnešních stolních počítačích se používají hlavně dva typy úložišť
+            – SSD (Solid-State Drive) a klasické pevné disky HDD. SSD mohou
+            využívat rozhraní SATA nebo PCI Express, zatímco běžné pevné disky
+            používají pouze SATA.
+          </p>
+
+          <p>
+            V minulosti existovaly také takzvané SSHD disky, které kombinovaly
+            klasický plotnový disk s menší flash pamětí. Řadič disku do ní
+            ukládal často používaná data, což pomáhalo zrychlit například start
+            operačního systému. Dnes už se s SSHD disky setkáte spíše výjimečně
+            ve starém notebooku.
+          </p>
+
+          <h3>SSD</h3>
+
+          <p>
+            SSD (Solid State Drive) používá polovodičové paměťové čipy NAND
+            flash a neobsahuje žádné pohyblivé části. Díky tomu má velmi krátkou
+            přístupovou dobu, vysokou rychlost čtení a zápisu a zároveň je
+            výrazně odolnější proti otřesům než klasický pevný disk. Právě kvůli
+            rychlosti je dnes ideální instalovat operační systém na SSD. Rozdíl
+            oproti klasickému HDD bývá při běžném používání počítače velmi
+            výrazný. Nevýhodou SSD bývá vyšší cena za jednotku kapacity, omezený
+            počet přepisů paměťových buněk a horší možnost obnovy dat při
+            selhání disku.
+          </p>
+
+          <h4>Hlavní parametry při výběru SSD disku</h4>
+
+          <ul>
+            <li>
+              <strong>Rozhraní</strong><br />
+              SSD může používat rozhraní SATA nebo PCI Express. V moderním
+              počítači je dnes ideální SSD ve formátu M.2 s podporou NVMe na
+              rozhraní PCI Express 4.0 nebo 5.0, které nabízí výrazně vyšší
+              rychlosti než klasické SATA SSD. Cenový rozdíl už často není
+              výrazný, takže výhody PCI Express obvykle převažují. SATA SSD má
+              stále smysl například při upgradu staršího počítače bez M.2 slotu
+              nebo pokud už jsou všechny M.2 sloty obsazené. Existují také
+              rozšiřující karty do PCI Express slotu, které umožňují připojit
+              jeden nebo více NVMe disků. Před použitím je ale dobré ověřit,
+              jestli z takové karty umí základní deska bootovat. Ne každý M.2
+              disk zároveň používá NVMe. Existují i M.2 SSD využívající SATA,
+              jejichž výkon je podobný klasickým 2,5" SATA SSD.
+            </li>
+
+            <li>
+              <strong>Kapacita</strong><br />
+              U běžného stolního počítače se dnes kapacita SSD pohybuje od
+              stovek GB po jednotky TB. Vhodná velikost závisí hlavně na tom,
+              jak bude počítač používán.
+            </li>
+
+            <li>
+              <strong>Rychlost čtení a zápisu</strong><br />
+              Výrobci často uvádějí hlavně sekvenční rychlosti čtení a zápisu,
+              které se u moderních NVMe disků pohybují v jednotkách GB/s.
+
+              <p>
+                Při běžném používání ale nejsou sekvenční rychlosti vždy
+                nejdůležitější. Velký vliv na skutečný pocit z rychlosti systému
+                má hlavně náhodný přístup k datům (random read/write), tedy
+                práce s velkým množstvím malých souborů uložených na různých
+                místech disku.
+              </p>
+
+              <p>
+                Výkon náhodného přístupu bývá často vyjadřován pomocí IOPS
+                (Input/Output Operations Per Second), tedy počtem operací za
+                sekundu. Právě tento parametr výrazně ovlivňuje rychlost startu
+                systému, načítání aplikací nebo celkovou odezvu počítače.
+              </p>
+
+              <p>
+                Některé SSD disky obsahují vlastní DRAM cache, která slouží jako
+                rychlá paměť pro mapovací tabulky dat. Levnější modely mohou
+                místo toho využívat technologii Host Memory Buffer (HMB), která
+                používá část operační paměti počítače. Takové řešení je
+                levnější, ale může mít nižší výkon hlavně při náhodném přístupu
+                k datům.
+              </p>
+            </li>
+
+            <li>
+              <strong>Typ paměťových buněk</strong><br />
+              SSD ukládá data do NAND flash buněk. Každá buňka uchovává
+              elektrický náboj, který reprezentuje uloženou informaci. Podle
+              počtu bitů uložených v jedné buňce existuje několik typů pamětí.
+              Typ buněk ovlivňuje rychlost, cenu i životnost SSD, protože každá
+              buňka zvládne pouze omezený počet přepisů.
+
+              <ul>
+                <li>
+                  <strong>SLC (Single Level Cell)</strong><br />
+                  Do jedné buňky ukládá jeden bit. Nabízí extrémně vysokou
+                  rychlost i životnost, ale kvůli ceně se v běžných počítačích
+                  prakticky nepoužívá.
+                </li>
+
+                <li>
+                  <strong>MLC (Multi Level Cell)</strong><br />
+                  Do jedné buňky ukládá dva bity. Nabízí vyšší kapacitu než SLC,
+                  ale dnes se kvůli ceně používá hlavně v profesionální sféře.
+                </li>
+
+                <li>
+                  <strong>TLC (Triple Level Cell)</strong><br />
+                  Ukládá tři bity do jedné buňky. Dnes jde o nejběžnější typ
+                  pamětí u spotřebitelských SSD disků. Nabízí dobrý poměr ceny,
+                  výkonu a životnosti.
+                </li>
+
+                <li>
+                  <strong>QLC (Quad Level Cell)</strong><br />
+                  Do jedné buňky ukládá čtyři bity. Používá se hlavně u
+                  levnějších SSD, ale má nejnižší životnost a pomalejší zápis.
+                </li>
+              </ul>
+
+              <p>
+                Moderní SSD disky často využívají takzvanou SLC cache. Řadič při
+                zápisu do TLC nebo QLC buněk dočasně používá jednodušší režim se
+                dvěma stavy, čímž výrazně zrychlí zápis dat. Později se data při
+                nižší zátěži přepíšou standardním způsobem podle typu použité
+                paměti. U starších SSD měla SLC cache pevnou velikost. Novější
+                disky často používají dynamickou cache, která se mění podle
+                volného místa na disku.
+              </p>
+            </li>
+
+            <li>
+              <strong>Životnost disku (TBW)</strong><br />
+              Každá NAND flash buňka zvládne pouze omezený počet přepisů. Proto
+              výrobci uvádějí parametr TBW (Total Bytes Written), který
+              vyjadřuje celkové množství dat, které lze na disk zapsat během
+              garantované životnosti.
+
+              <p>
+                Hodnota TBW se obvykle udává v terabajtech a závisí hlavně na
+                typu buněk a kapacitě disku. Obecně platí, že větší disky mají
+                vyšší TBW, protože zápisy lze rozložit mezi větší množství
+                buněk.
+              </p>
+
+              <p>
+                SSD zároveň používají technologii wear leveling, která
+                rovnoměrně rozděluje zápisy mezi jednotlivé paměťové buňky a
+                pomáhá prodlužovat životnost disku. Při běžném domácím používání
+                představuje TBW spíše teoretické omezení. I levnější SSD totiž
+                často zvládnou zapsat stovky terabajtů dat, což odpovídá mnoha
+                letům běžného provozu.
+              </p>
+            </li>
+          </ul>
+
+          <h3>HDD - Pevný disk</h3>
+
+          <p>
+            HDD (Hard Disk Drive), tedy klasický pevný disk, ukládá data na
+            rotující magnetické plotny. O čtení a zápis dat se stará pohyblivá
+            hlava, která se přesouvá nad povrchem ploten. HDD obsahuje
+            mechanické části, což výrazně ovlivňuje jeho rychlost, hlučnost i
+            odolnost vůči otřesům. Přestože jsou dnes HDD postupně nahrazovány
+            SSD disky, stále dávají smysl jako sekundární úložiště pro větší
+            množství dat. Jejich hlavní výhodou zůstává vysoká kapacita a velmi
+            příznivá cena za gigabajt prostoru.
+          </p>
+
+          <h4>Hlavní parametry při výběru HDD</h4>
+
+          <ul>
+            <li>
+              <strong>Kapacita</strong><br />
+              Moderní HDD se pohybují od jednotek až po nižší desítky TB. Při
+              výběru je dobré sledovat hlavně poměr ceny a kapacity.
+            </li>
+
+            <li>
+              <strong>Rozhraní</strong><br />
+              Dnes se téměř výhradně používá SATA, přičemž verze rozhraní SATA
+              I, II a III jsou navzájem kompatibilní. Maximální rychlost SATA
+              III je 6 Gb/s, což je ale stále více, než běžný HDD dokáže využít.
+
+              <p>
+                U použitých disků v bazarech a na aukčních portálech můžete
+                narazit také na SAS disky, které mohou být občas nabízeny za
+                velmi příznivou cenu. Tyto disky jsou ale určené hlavně pro
+                servery a i když se dá koupit redukční kabel SATA - SAS, bez
+                speciálního SAS řadiče na běžné základní desce většinou fungovat
+                nebudou.
+              </p>
+            </li>
+
+            <li>
+              <strong>Rychlost otáček (RPM) a přístupová doba</strong><br />
+              Nejčastěji se dnes setkáte s disky o rychlosti 5400 RPM nebo 7200
+              RPM.
+
+              <p>
+                Vyšší otáčky znamenají vyšší výkon, ale také vyšší hlučnost,
+                teplotu a spotřebu.
+              </p>
+
+              <p>
+                Přístupová doba HDD se skládá z přesunu čtecí hlavy a čekání na
+                otočení správného sektoru pod hlavu.
+              </p>
+
+              <p>
+                U 7200 RPM disků bývá seek time přibližně kolem 8 ms a rotační
+                latence kolem 4 ms. Oproti tomu SSD pracují v řádu mikrosekund.
+              </p>
+            </li>
+
+            <li>
+              <strong>Rychlost čtení a zápisu</strong><br />
+              Moderní HDD dosahují přibližně 100–250 MB/s. Skutečný výkon ale
+              omezuje hlavně mechanická konstrukce disku.
+
+              <p>
+                Další nevýhodou HDD může být spin-down režim. Pokud je disk
+                delší dobu nečinný, může zastavit plotny kvůli úspoře energie.
+                Při dalším přístupu k datům se ale musí znovu roztočit, což může
+                způsobit několikasekundové zpoždění.
+              </p>
+
+              <p>
+                U HDD může docházet také k fragmentaci dat, kdy jsou soubory
+                uložené na více místech disku. Čtecí hlava pak musí více
+                přeskakovat, což zpomaluje práci s daty.
+              </p>
+
+              <p>
+                Moderní HDD obsahují také vlastní cache paměť, která slouží k
+                ukládání často používaných dat. Její velikost se dnes běžně
+                pohybuje mezi 64 a 512 MB.
+              </p>
+            </li>
+
+            <li>
+              <strong>Hlučnost</strong><br />
+              Hluk pevného disku vzniká otáčením ploten a pohybem čtecích hlav.
+              Některé enterprise disky používají helium, které snižuje odpor
+              prostředí uvnitř disku a pomáhá chlazení. Díky tomu bývají tyto
+              disky zpravidla méně hlučné. Hlučnost HDD se běžně pohybuje kolem
+              20–30 dB.
+            </li>
+
+            <li>
+              <strong>Formát</strong><br />
+              HDD se vyrábějí hlavně ve velikostech 3,5" a 2,5". Ve stolních
+              počítačích se nejčastěji používají 3,5" modely.
+            </li>
+
+            <li>
+              <strong>Technologie zápisu dat</strong>
+
+              <ul>
+                <li>
+                  <strong>CMR (Conventional Magnetic Recording)</strong><br />
+                  Klasická technologie zápisu bez překrývání stop. Nabízí
+                  stabilní výkon při čtení i zápisu.
+                </li>
+
+                <li>
+                  <strong>SMR (Shingled Magnetic Recording)</strong><br />
+                  Technologie, při které se jednotlivé stopy částečně
+                  překrývají. Díky tomu lze zvýšit kapacitu disku. Nevýhodou SMR
+                  je pomalejší přepis dat při častém zápisu. Pro archivaci nebo
+                  běžné datové úložiště ale může být stále vhodnou volbou.
+                </li>
+
+                <li>
+                  <strong>HAMR (Heat-Assisted Magnetic Recording)</strong><br />
+                  Technologie využívající lokální zahřívání média laserem, která
+                  umožňuje uložit více dat na menší plochu.
+                </li>
+
+                <li>
+                  <strong>MAMR (Microwave-Assisted Magnetic Recording)</strong
+                  ><br />
+                  Technologie využívající mikrovlnné elektromagnetické pole pro
+                  zlepšení zápisu dat.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <p>
+            Na fotografii níže je zleva vidět klasický 3,5" HDD, menší 2,5" HDD,
+            hybridní SSHD, 2,5" SSD a moderní M.2 SSD. Pro zajímavost je na
+            konci řady také starý MFM disk formátu 5,25" s kapacitou 20 MB.
+            Moderní M.2 SSD vedle něj má kapacitu 2 TB, tedy přibližně 100 000×
+            více dat při výrazně menších rozměrech.
+          </p>
+
+          <div class="img-center">
+            <img
+              src="../assets/img/disky.webp"
+              alt="Různé typy datových úložišť: HDD, SSHD, SSD, M.2 SSD a starý MFM disk"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../assets/js/include.js"></script>
+    <script>
+      async function loadLayout() {
+        await includeHTML("header", "../components/header.html");
+        await includeHTML("footer", "../components/footer.html");
+
+        markActiveNav();
+        initMobileNav();
+
+        const year = document.getElementById("year");
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      }
+
+      loadLayout();
+    </script>
+  </body>
 </html>
