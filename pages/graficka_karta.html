@@ -9,7 +9,7 @@
     </title>
     <meta
       name="description"
-      content="Grafická karta se stará o zobrazování grafiky"
+      content="Grafická karta se stará o zobrazování grafiky na monitoru počítače."
     />
     <link rel="icon" type="image/png" href="../assets/img/ico.png" />
 
@@ -30,8 +30,321 @@
     <main id="obsah" class="site-main">
       <div class="container">
         <section class="card">
-          <h2>Nadpis stránky</h2>
-          <p>Úvodní text stránky.</p>
+          <h3>Grafická karta</h3>
+
+          <p>
+            Grafická karta je komponenta, která se stará o zpracování a
+            vykreslování obrazu. Jejím hlavním prvkem je grafický čip (GPU –
+            Graphics Processing Unit), který provádí výpočty potřebné pro
+            zobrazení grafiky. Výsledný obraz pak grafická karta odešle na
+            monitor.
+          </p>
+
+          <p>
+            Grafická karta ale neslouží jen k běžnému zobrazení plochy, programů
+            nebo webového prohlížeče. Využívá se také při náročnější práci,
+            například při renderování 3D grafiky, zpracování videa nebo
+            výpočtech v oblasti umělé inteligence.
+          </p>
+
+          <p>
+            Pro nenáročné použití a kancelářské počítače většinou stačí
+            integrované grafické jádro. Pro hraní náročnějších her, práci s 3D
+            grafikou nebo profesionální výpočty se používá samostatná, tedy
+            dedikovaná grafická karta.
+          </p>
+
+          <h4>Integrované grafické jádro (iGPU)</h4>
+
+          <p>
+            Pokud je počítač určený hlavně pro kancelářskou práci, prohlížení
+            webu, sledování videí nebo jinou méně náročnou činnost, obvykle
+            postačí integrovaná grafika. Dnešní integrované grafické čipy už
+            zvládají bez problémů i více monitorů, rozlišení 4K a často i starší
+            nebo méně náročné hry.
+          </p>
+
+          <p>
+            Hlavní výhoda integrované grafiky je patrná na první pohled není
+            potřeba kupovat samostatnou grafickou kartu.
+          </p>
+
+          <p>
+            Nevýhodou je nižší výkon. Integrované grafiky mají méně výpočetních
+            jednotek, nižší pracovní frekvence a sdílejí napájecí i tepelný
+            limit s procesorem. Nemají také vlastní dedikovanou grafickou paměť,
+            takže využívají část operační paměti počítače. Ta má vyšší latenci a
+            nižší propustnost než specializovaná grafická paměť u samostatných
+            grafických karet. To omezuje výkon hlavně u náročnějších grafických
+            úloh.
+          </p>
+
+          <p>
+            Dříve bývala integrovaná grafika součástí čipsetu na základní desce.
+            Dnes je integrovaná přímo v procesoru. Základní deska tedy už
+            většinou neobsahuje vlastní grafický čip, ale pokud chcete
+            integrovanou grafiku používat, musí ji základní deska podporovat a
+            mít na zadním panelu odpovídající obrazové výstupy, například HDMI
+            nebo DisplayPort.
+          </p>
+
+          <p>
+            Integrované grafiky dnes v běžných počítačích najdeme u procesorů
+            Intel i AMD. U Intelu bývá integrovaná grafika součástí většiny
+            běžných modelů. Setkat se můžete například s označením Intel UHD
+            Graphics nebo Intel Iris Xe Graphics. U novějších procesorů Intel se
+            objevují také grafiky založené na architektuře Xe-LPG.
+          </p>
+
+          <p>
+            U procesorů Intel poznáte chybějící integrovanou grafiku podle
+            písmene „F“ v označení procesoru. Například procesor i5-12400F
+            integrovanou grafiku nemá.
+          </p>
+
+          <p>
+            AMD používá pro integrované grafiky označení Radeon Graphics. U
+            procesorů pro patici AM4 bývají modely s integrovanou grafikou
+            označené písmenem „G“, například Ryzen 5 5600G. Tyto procesory
+            používají grafiku architektury Vega.
+          </p>
+
+          <p>
+            U platformy AM5 je situace trochu složitější. Modely s písmenem „G“
+            mají výkonnější integrované grafické jádro architektury RDNA3.
+            Modely bez tohoto označení používají jednodušší iGPU architektury
+            RDNA2 a modely s písmenem „F“ integrovanou grafiku nemají vůbec.
+          </p>
+
+          <h4>Dedikovaná grafická karta</h4>
+
+          <p>
+            Dedikovaná grafická karta je samostatné zařízení určené pro
+            zpracování grafických a výpočetních úloh. Na rozdíl od integrované
+            grafiky má vlastní grafický procesor a vlastní paměť označovanou
+            jako VRAM. Díky tomu nezatěžuje operační paměť počítače a nabízí
+            výrazně vyšší výkon.
+          </p>
+
+          <p>
+            Samostatná grafická karta se používá hlavně pro moderní hry, práci s
+            3D grafikou, zpracování videa, vědecké výpočty nebo úlohy v oblasti
+            umělé inteligence. Nejvýkonnější modely se používají i v
+            profesionálním nasazení, kde mohou sloužit jako dostupnější
+            alternativa ke specializovaným výpočetním akcelerátorům.
+          </p>
+
+          <p>
+            Nevýhodou dedikovaných grafických karet je vyšší spotřeba, větší
+            nároky na zdroj a vyšší produkce tepla. Největší nevýhodou je cena.
+            U herních počítačů může být grafická karta klidně nejdražší
+            komponentou celé sestavy.
+          </p>
+
+          <p>
+            Dedikovaná grafická karta se do základní desky připojuje přes
+            rozhraní PCI Express x16. Na zadní straně karty najdete obrazové
+            výstupy, nejčastěji HDMI a DisplayPort.
+          </p>
+
+          <p>
+            Grafické čipy pro běžné dedikované grafické karty dnes vyrábějí
+            hlavně společnosti Nvidia, AMD a v posledních letech také Intel.
+          </p>
+
+          <h4>Hlavní parametry při výběru dedikované grafické karty</h4>
+
+          <ul>
+            <li>
+              <strong>Grafický čip (GPU – Graphics Processing Unit)</strong
+              ><br />
+              Grafický čip je hlavní výpočetní část grafické karty. Zajišťuje
+              zpracování grafických i obecně paralelizovatelných úloh. Zatímco
+              procesor je vhodný hlavně pro složitější sekvenční úlohy, GPU je
+              navrženo pro paralelní zpracování velkého množství jednodušších
+              operací najednou.
+            </li>
+
+            <p>
+              Proto grafické čipy obsahují velké množství výpočetních jednotek,
+              například CUDA cores u karet Nvidia. Výkon grafické karty závisí
+              hlavně na architektuře čipu, počtu výpočetních jednotek a jejich
+              efektivitě.
+            </p>
+
+            <p>
+              Moderní grafické čipy se dnes nepoužívají jen pro vykreslování
+              obrazu. Díky technologii GPGPU se využívají i pro obecné výpočty,
+              například ve strojovém učení nebo vědeckých simulacích.
+            </p>
+          </ul>
+          <ul>
+            <li>
+              <strong>Generace a model grafické karty</strong><br />
+              Generace grafických karet označuje skupinu modelů založených na
+              stejné architektuře grafického čipu. Novější generace obvykle
+              přinášejí vyšší výkon, lepší energetickou efektivitu a nové
+              technologie.
+            </li>
+
+            <p>
+              V rámci jedné generace existují různé výkonové varianty. Liší se
+              použitým grafickým čipem, počtem aktivních výpočetních jednotek a
+              dalšími parametry. Výrobci modely označují kombinací čísla
+              generace, výkonového stupně a někdy také doplňkovým označením pro
+              výkonnější variantu, například Nvidia RTX 5060 Ti nebo AMD Radeon
+              RX 9070 XT.
+            </p>
+          </ul>
+          <ul>
+            <li>
+              <strong>Grafická paměť (VRAM)</strong><br />
+              Dedikovaná grafická karta má vlastní grafickou paměť, typicky 8 GB
+              a více. Do VRAM se ukládají data potřebná pro vykreslování obrazu,
+              například textury, 3D modely, stínové mapy a další grafická data.
+            </li>
+
+            <p>
+              VRAM slouží také pro framebuffer, tedy obraz připravovaný k
+              zobrazení na monitoru. Stejně jako operační paměť má i grafická
+              paměť různé generace. U grafických karet se používá označení GDDR,
+              přičemž jednotlivé generace se liší rychlostí a propustností.
+            </p>
+
+            <p>
+              Výkon grafické paměti neurčuje jen její kapacita, ale také
+              rychlost přenosu dat mezi pamětí a grafickým čipem. Tu ovlivňuje
+              šířka paměťové sběrnice, která udává, kolik dat může být přeneseno
+              mezi GPU a pamětí za jeden takt. Tento údaj se uvádí v bitech.
+            </p>
+
+            <p>
+              Vyšší šířka sběrnice umožňuje přenášet větší množství dat
+              současně. Výsledná propustnost paměti pak závisí na kombinaci
+              šířky sběrnice a frekvence paměti. Vyšší propustnost pomáhá hlavně
+              při práci s velkým množstvím dat, například ve vysokém rozlišení
+              nebo při použití detailních textur.
+            </p>
+
+            <p>
+              Kapacita VRAM je velmi důležitá pro plynulý chod aplikací. Pokud
+              grafická pamět nestačí, musí se data přesouvat do operační paměti
+              počítače, což výrazně snižuje výkon. Nároky na VRAM rostou s
+              rozlišením obrazu a složitostí zpracovávaných dat.
+            </p>
+
+            <p>
+              U některých výpočetních úloh, například při lokálním spouštění
+              modelů umělé inteligence, musí grafická paměť pojmout celý model,
+              aby s ním grafická karta mohla efektivně pracovat.
+            </p>
+          </ul>
+          <ul>
+            <li>
+              <strong>Moderní technologie grafických karet</strong><br />
+              Moderní grafické karty podporují řadu technologií, které zlepšují
+              kvalitu obrazu nebo zvyšují výkon.
+            </li>
+
+            <p>
+              Patří sem například Ray Tracing, který umožňuje realističtější
+              zobrazení světla, odrazů a stínů. Další důležitou oblastí jsou
+              technologie upscalingu, které umožňují dosáhnout vyššího výkonu
+              při zachování relativně dobré vizuální kvality.
+            </p>
+
+            <p>
+              Některé moderní karty podporují také Frame Generation , tedy
+              generování mezisnímků mezi skutečně vykreslenými snímky. Díky tomu
+              může obraz působit plynuleji. Podpora konkrétních technologií
+              závisí na výrobci a generaci grafické karty.
+            </p>
+          </ul>
+          <ul>
+            <li>
+              <strong>Spotřeba a napájení</strong><br />
+              Grafické karty patří mezi energeticky nejnáročnější komponenty
+              počítače. Podobně jako u procesoru se používá údaj TDP, který
+              popisuje množství tepla, které je potřeba z grafické karty odvést.
+            </li>
+
+            <p>
+              Skutečná spotřeba se může lišit podle konkrétní zátěže a
+              provozních podmínek. Grafická karta je napájena přes PCI Express
+              slot, který může dodat přibližně 75 W, a dále pomocí přídavných
+              napájecích konektorů ze zdroje.
+            </p>
+
+            <p>
+              Tyto konektory mohou mít různá provedení, například 6pin, 8pin,
+              2×8pin nebo moderní 12pinové konektory. U výkonnějších karet je
+              proto nutné zkontrolovat, jestli má zdroj dostatečný výkon,
+              kvalitu i správné konektory.
+            </p>
+          </ul>
+          <ul>
+            <li>
+              <strong>Chlazení a rozměry</strong><br />
+              Grafická karta při provozu produkuje velké množství tepla. Pokud
+              chlazení nestačí, může dojít ke zvýšení teploty grafického čipu a
+              následnému snížení výkonu, tedy k takzvanému thermal throttlingu.
+            </li>
+
+            <p>
+              Většina moderních grafických karet používá aktivní chlazení, tedy
+              pasivní chladič doplněný jedním nebo více ventilátory. Kvalita
+              chlazení má přímý vliv na teploty, hlučnost i stabilitu grafické
+              karty.
+            </p>
+
+            <p>
+              Konstrukce chlazení zároveň ovlivňuje rozměry grafické karty.
+              Výkonné modely mohou být velmi dlouhé a často zabírají více pozic
+              ve skříni - obvykle 2 až 4 sloty. Před nákupem je proto potřeba
+              ověřit, jestli se karta vejde do konkrétní skříně. Delší a
+              silnější modely mohou také zhoršit proudění vzduchu nebo překrýt
+              sousední PCI Express sloty.
+            </p>
+
+            <p>
+              Teplo z grafické karty se navíc odvádí do vnitřního prostoru
+              skříně, takže je potřeba mít dobře navržené proudění vzduchu
+              pomocí ventilátorů.
+            </p>
+          </ul>
+          <ul>
+            <li>
+              <strong>Obrazové výstupy</strong><br />
+              Na zadní straně grafické karty jsou obrazové výstupy pro připojení
+              monitoru nebo jiného zobrazovacího zařízení.
+            </li>
+
+            <p>
+              Dnes se nejčastěji setkáte s konektory HDMI a DisplayPort. Při
+              výběru grafické karty je dobré zkontrolovat nejen jejich typ, ale
+              také počet podle plánovaného použití a počtu monitorů.
+            </p>
+          </ul>
+          <ul>
+            <li>
+              <strong>Konstrukční provedení</strong><br />
+              Stejně jako u základních desek se i grafické karty liší kvalitou
+              zpracování. Výrobci je rozdělují do různých modelových řad, které
+              se liší použitými součástkami, chladičem, rozměry i celkovým
+              provedením.
+            </li>
+
+            <p>
+              Vyšší řady obvykle nabízejí robustnější napájecí kaskádu,
+              účinnější a tišší chladiče s více ventilátory a kvalitnější
+              součástky.
+            </p>
+
+            <p>
+              Konstrukční provedení má přímý vliv na provozní vlastnosti
+              grafické karty, hlavně na teploty, hlučnost a životnost.
+            </p>
+          </ul>
         </section>
       </div>
     </main>
