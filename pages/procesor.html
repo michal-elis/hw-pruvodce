@@ -1,210 +1,224 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Komponenty - Procesor | Multimediální průvodce hardwarem</title>
-  <meta name="description" content="Procesor - hlavní výpočetní jednotka počítače." />
-  <link rel="icon" type="image/png" href="../assets/img/ico.png" />
+    <title>Komponenty - Procesor | Multimediální průvodce hardwarem</title>
+    <meta
+      name="description"
+      content="Procesor - hlavní výpočetní jednotka počítače."
+    />
+    <link rel="icon" type="image/png" href="../assets/img/ico.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
+  <body>
+    <div id="header"></div>
 
-<body>
+    <main id="obsah" class="site-main">
+      <div class="container">
+        <section class="card">
+          <h2>Procesor</h2>
 
-<div id="header"></div>
+          <p>
+            Procesor (Central Processing Unit, CPU) je hlavní výpočetní jednotka
+            počítače, která zpracovává instrukce předávané operačním systémem a
+            jednotlivými programy. Každé otevření aplikace, výpočet v tabulce
+            nebo spuštění hry závisí právě na činnosti procesoru. Jeho výkon tak
+            výrazně ovlivňuje celkovou rychlost a odezvu celého systému.
+          </p>
 
-<main id="obsah" class="site-main">
-  <div class="container">
+          <p>
+            V oblasti běžných osobních počítačů dnes dominují dva výrobci – AMD
+            a Intel. Oba používají vlastní platformy a patice, které určují
+            kompatibilitu se základní deskou i podporovaný typ operační paměti.
+          </p>
 
-    <section class="card">
-<h2>Procesor</h2>
+          <p>
+            Moderní procesory jsou extrémně složité obvody obsahující miliardy
+            tranzistorů. Zjednodušeně lze jejich fungování popsat jako neustálý
+            cyklus načítání instrukcí, jejich dekódování a následného
+            vykonávání. Procesor postupně zpracovává data, která načítá z
+            paměti, a provádí jednotlivé operace požadované systémem nebo
+            spuštěnými aplikacemi.
+          </p>
 
-<p>
-  Procesor (Central Processing Unit, CPU) je hlavní výpočetní jednotka počítače,
-  která zpracovává instrukce předávané operačním systémem a jednotlivými programy.
-  Každé otevření aplikace, výpočet v tabulce nebo spuštění hry závisí právě
-  na činnosti procesoru. Jeho výkon tak výrazně ovlivňuje celkovou rychlost
-  a odezvu celého systému.
-</p>
+          <p>
+            Z pohledu běžného uživatele je ale nejdůležitější hlavně to, jak
+            rychle a kolik úloh dokáže procesor zpracovat v určitém čase.
+          </p>
 
-<p>
-  V oblasti běžných osobních počítačů dnes dominují dva výrobci – AMD a Intel.
-  Oba používají vlastní platformy a patice, které určují kompatibilitu
-  se základní deskou i podporovaný typ operační paměti.
-</p>
+          <h4>Hlavní parametry při výběru procesoru</h4>
 
-<p>
-  Moderní procesory jsou extrémně složité obvody obsahující miliardy tranzistorů.
-  Zjednodušeně lze jejich fungování popsat jako neustálý cyklus načítání instrukcí,
-  jejich dekódování a následného vykonávání. Procesor postupně zpracovává data,
-  která načítá z paměti, a provádí jednotlivé operace požadované systémem
-  nebo spuštěnými aplikacemi.
-</p>
+          <ul>
+            <li>
+              <strong>Počet jader a vláken</strong><br />
+              Moderní procesory obsahují více jader. Každé jádro funguje jako
+              samostatná výpočetní jednotka schopná zpracovávat instrukce
+              nezávisle na ostatních. Vyšší počet jader zlepšuje schopnost
+              paralelního zpracování více úloh současně.
 
-<p>
-  Z pohledu běžného uživatele je ale nejdůležitější hlavně to, jak rychle
-  a kolik úloh dokáže procesor zpracovat v určitém čase.
-</p>
+              <p>
+                Většina moderních procesorů navíc umožňuje zpracovávat více
+                vláken na jednom jádře pomocí technologií Hyper-Threading nebo
+                SMT. Vlákno představuje logickou výpočetní jednotku, která
+                pomáhá efektivněji využít výkon procesoru při práci s více
+                úlohami najednou.
+              </p>
 
-<h4>Hlavní parametry při výběru procesoru</h4>
+              <p>
+                Dnešní procesory už navíc nemusí obsahovat pouze stejná jádra.
+                Některé architektury kombinují výkonná a úsporná jádra. Výkonná
+                jádra jsou určená pro náročné úlohy vyžadující vysoký výkon,
+                zatímco úsporná jádra se starají hlavně o méně náročné procesy
+                běžící na pozadí. Operační systém pak podle aktuální zátěže
+                rozhoduje, které úlohy poběží na kterém typu jader.
+              </p>
 
-<ul>
-  <li><p>
-    <strong>Počet jader a vláken</strong><br>
-    Moderní procesory obsahují více jader. Každé jádro funguje jako samostatná
-    výpočetní jednotka schopná zpracovávat instrukce nezávisle na ostatních.
-    Vyšší počet jader zlepšuje schopnost paralelního zpracování více úloh současně.
-  
-  Většina moderních procesorů navíc umožňuje zpracovávat více vláken na jednom
-  jádře pomocí technologií Hyper-Threading nebo SMT. Vlákno představuje
-  logickou výpočetní jednotku, která pomáhá efektivněji využít výkon procesoru
-  při práci s více úlohami najednou.
+              <p>
+                Pro běžný kancelářský počítač dnes většinou stačí čtyři až šest
+                jader. Náročnější sestavy mohou využívat osm a více jader, ale
+                reálný přínos vždy závisí na konkrétním typu práce. Některé
+                úlohy totiž neumí efektivně využít více jader a jejich výkon
+                závisí hlavně na výkonu jednoho jádra. Naopak například vědecké
+                výpočty nebo strojové učení často využívají spíše výkon grafické
+                karty, která je pro paralelní zpracování vhodnější.
+              </p>
+            </li>
 
-  Dnešní procesory už navíc nemusí obsahovat pouze stejná jádra. Některé architektury
-  kombinují výkonná a úsporná jádra. Výkonná jádra jsou určená pro náročné
-  úlohy vyžadující vysoký výkon, zatímco úsporná jádra se starají hlavně o méně
-  náročné procesy běžící na pozadí. Operační systém pak podle aktuální zátěže
-  rozhoduje, které úlohy poběží na kterém typu jader.
+            <li>
+              <strong>Taktovací frekvence procesoru</strong><br />
+              Taktovací frekvence se udává v GHz a vyjadřuje počet cyklů, které
+              procesor zvládne vykonat za jednu sekundu. Rozlišujeme základní a
+              boost frekvenci. Základní frekvence představuje hodnotu určenou
+              pro dlouhodobý stabilní provoz, zatímco boost frekvence se
+              aktivuje při vyšší zátěži, například při spuštění náročnější
+              aplikace.
 
-  Pro běžný kancelářský počítač dnes většinou stačí čtyři až šest jader.
-  Náročnější sestavy mohou využívat osm a více jader, ale reálný přínos vždy
-  závisí na konkrétním typu práce. Některé úlohy totiž neumí efektivně využít
-  více jader a jejich výkon závisí hlavně na výkonu jednoho jádra. Naopak například
-  vědecké výpočty nebo strojové učení často využívají spíše výkon grafické karty,
-  která je pro paralelní zpracování vhodnější.
-</li></p>
+              <p>
+                V minulosti byla taktovací frekvence hlavním parametrem výkonu
+                procesoru, dnes už to ale nestačí. Výkon ovlivňuje také počet
+                jader, efektivita architektury, schopnost zpracovat více
+                instrukcí během jednoho cyklu (IPC), velikost cache paměti nebo
+                možnosti paralelního zpracování.
+              </p>
+            </li>
 
+            <li>
+              <strong>Cache paměť</strong><br />
+              Procesor obsahuje vlastní velmi rychlou paměť označovanou jako
+              cache. Ta slouží k ukládání často používaných dat a instrukcí, aby
+              je procesor nemusel neustále načítat z pomalejší operační paměti.
 
+              <p>
+                <strong>Cache paměť se rozděluje do několika úrovní:</strong>
+              </p>
 
-  <li><p>
-    <strong>Taktovací frekvence procesoru</strong><br>
-    Taktovací frekvence se udává v GHz a vyjadřuje počet cyklů, které procesor
-    zvládne vykonat za jednu sekundu. Rozlišujeme základní a boost frekvenci.
-    Základní frekvence představuje hodnotu určenou pro dlouhodobý stabilní provoz,
-    zatímco boost frekvence se aktivuje při vyšší zátěži, například při spuštění
-    náročnější aplikace.
-      V minulosti byla taktovací frekvence hlavním parametrem výkonu procesoru,
-  dnes už to ale nestačí. Výkon ovlivňuje také počet jader, efektivita architektury,
-  schopnost zpracovat více instrukcí během jednoho cyklu (IPC), velikost cache
-  paměti nebo možnosti paralelního zpracování.
-  </li></p>
+              <ul>
+                <li>
+                  <strong>L1 cache</strong> – nejmenší a nejrychlejší úroveň
+                  cache. Každé jádro má vlastní L1 cache.
+                </li>
 
+                <li>
+                  <strong>L2 cache</strong> – větší a pomalejší než L1, opět
+                  většinou samostatná pro každé jádro.
+                </li>
 
+                <li>
+                  <strong>L3 cache</strong> – největší a zároveň nejpomalejší
+                  úroveň cache, která bývá sdílená mezi jádry procesoru.
+                </li>
+              </ul>
+            </li>
 
-  <li><p>
-    <strong>Cache paměť</strong><br>
-    Procesor obsahuje vlastní velmi rychlou paměť označovanou jako cache.
-    Ta slouží k ukládání často používaných dat a instrukcí, aby je procesor
-    nemusel neustále načítat z pomalejší operační paměti.
-  </li></p>
+            <li>
+              <strong>Integrované grafické jádro (iGPU)</strong><br />
+              Některé procesory obsahují integrovanou grafiku, díky které může
+              počítač fungovat i bez samostatné grafické karty. To je vhodné
+              hlavně pro kancelářské počítače, multimédia nebo běžné domácí
+              použití. Pokud procesor integrovanou grafiku nemá, je nutné použít
+              samostatnou grafickou kartu.
+            </li>
 
+            <li>
+              <strong>Thermal Design Power (TDP)</strong><br />
+              TDP udává množství tepla ve wattech, které musí chladič procesoru
+              zvládnout dlouhodobě odvádět. Nejde přímo o maximální spotřebu
+              procesoru, protože ta může být krátkodobě vyšší například při
+              boost režimu. U běžných procesorů bývá TDP kolem 65 W, u
+              výkonnějších modelů může být výrazně vyšší.
 
-<p>
-  <strong>Cache paměť se rozděluje do několika úrovní:</strong><br>
-</p>
+              <p>
+                S tím souvisí i vyšší spotřeba elektrické energie a nároky na
+                chlazení. Procesory proto využívají napájecí kaskádu základní
+                desky, která převádí napětí na požadované hodnoty a je napájena
+                přídavným EPS konektorem ze zdroje.
+              </p>
+            </li>
 
-<ul>
-    
-  <li>
-    <strong>L1 cache</strong> – nejmenší a nejrychlejší úroveň cache.
-    Každé jádro má vlastní L1 cache.
-  </li>
+            <li>
+              <strong>Patice</strong><br />
+              Každý procesor je určený pro konkrétní patici základní desky. Ta
+              určuje fyzickou kompatibilitu a často souvisí i s podporovaným
+              typem operační paměti. Například platforma AM4 podporuje DDR4,
+              zatímco AM5 využívá DDR5.
 
-  <li>
-    <strong>L2 cache</strong> – větší a pomalejší než L1, opět většinou
-    samostatná pro každé jádro.
-  </li>
+              <p>
+                Některé platformy, například Intel LGA1700, mohou podporovat
+                více typů pamětí, ale konkrétní základní deska vždy pouze jeden
+                typ. Výběr procesoru a základní desky tedy prakticky znamená
+                výběr celé platformy.
+              </p>
+            </li>
 
-  <li>
-    <strong>L3 cache</strong> – největší a zároveň nejpomalejší úroveň cache,
-    která bývá sdílená mezi jádry procesoru.
-  </li>
-</ul>
+            <li>
+              <strong>Obsah balení</strong><br />
+              Procesor lze koupit samostatně nebo v takzvané box verzi s
+              přiloženým chladičem. Boxový chladič představuje základní řešení
+              určené pro běžný provoz.
 
+              <p>
+                Obvykle jde o jednoduchý hliníkový nebo kombinovaný chladič s
+                ventilátorem. Pro běžné použití většinou stačí, ale jeho
+                hlučnost a chladicí výkon mohou být omezené. Pokud plánujete
+                výkonnější nebo tišší chlazení, bývá často výhodnější koupit
+                procesor bez boxového chladiče a pořídit chladič samostatně.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
 
-  <li><p>
-    <strong>Integrované grafické jádro (iGPU)</strong><br>
-    Některé procesory obsahují integrovanou grafiku, díky které může počítač
-    fungovat i bez samostatné grafické karty. To je vhodné hlavně pro kancelářské
-    počítače, multimédia nebo běžné domácí použití. Pokud procesor integrovanou
-    grafiku nemá, je nutné použít samostatnou grafickou kartu.
-  </li></p>
+    <div id="footer"></div>
 
-  <li><p>
-    <strong>Thermal Design Power (TDP)</strong><br>
-    TDP udává množství tepla ve wattech, které musí chladič procesoru zvládnout
-    dlouhodobě odvádět. Nejde přímo o maximální spotřebu procesoru, protože ta může
-    být krátkodobě vyšší například při boost režimu.  U běžných procesorů bývá TDP kolem 65 W, 
-    u výkonnějších modelů může být výrazně
-  vyšší. S tím souvisí i vyšší spotřeba elektrické energie a nároky
-  na chlazení. Procesory proto využívají napájecí kaskádu základní desky,
-  která převádí napětí na požadované hodnoty a je napájena přídavným EPS
-  konektorem ze zdroje.
-  </li></p>
+    <script src="../assets/js/include.js"></script>
+    <script>
+      async function loadLayout() {
+        await includeHTML("header", "../components/header.html");
+        await includeHTML("footer", "../components/footer.html");
 
+        markActiveNav();
+        initMobileNav();
 
+        const year = document.getElementById("year");
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      }
 
-
-  <li>
-    <p>
-    <strong>Patice</strong><br>
-    Každý procesor je určený pro konkrétní patici základní desky. Ta určuje
-    fyzickou kompatibilitu a často souvisí i s podporovaným typem operační paměti.
-    Například platforma AM4 podporuje DDR4, zatímco AM5 využívá DDR5.
-      Některé platformy, například Intel LGA1700, mohou podporovat více typů pamětí,
-  ale konkrétní základní deska vždy pouze jeden typ. Výběr procesoru a základní
-  desky tedy prakticky znamená výběr celé platformy.
-  </li>
-</p>
-
-  <li>
-    <p>
-    <strong>Obsah balení</strong><br>
-    Procesor lze koupit samostatně nebo v takzvané box verzi s přiloženým
-    chladičem. Boxový chladič představuje základní řešení určené pro běžný provoz.
-      Obvykle jde o jednoduchý hliníkový nebo kombinovaný chladič s ventilátorem.
-  Pro běžné použití většinou stačí, ale jeho hlučnost a chladicí výkon mohou být
-  omezené. Pokud plánujete výkonnější nebo tišší chlazení, bývá často výhodnější
-  koupit procesor bez boxového chladiče a pořídit chladič samostatně.
-  </li>
-</p>
-
-</ul>
-    </section>
-
-  </div>
-</main>
-
-<div id="footer"></div>
-
-<script src="../assets/js/include.js"></script>
-<script>
-async function loadLayout(){
-  await includeHTML("header", "../components/header.html");
-  await includeHTML("footer", "../components/footer.html");
-
-  markActiveNav();
-  initMobileNav();
-
-  const year = document.getElementById("year");
-  if(year){
-    year.textContent = new Date().getFullYear();
-  }
-}
-
-loadLayout();
-</script>
-
-</body>
+      loadLayout();
+    </script>
+  </body>
 </html>
