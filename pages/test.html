@@ -1,75 +1,188 @@
 <!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Multimediální průvodce základů hardware</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="Multimediální průvodce základů PC hardwaru: video montáže, materiály, kvíz a katalog komponent." />
-  <link rel="icon" type="image/png" href="../assets/img/ico.png" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
-</head>
+    <title>Výukové video | Multimediální průvodce hardwarem</title>
+    <meta
+      name="description"
+      content="Výukové video montáže počítače krok za krokem."
+    />
 
-<body>
+    <link rel="icon" type="image/png" href="../assets/img/ico.png" />
 
-<div id="header"></div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<main id="obsah" class="site-main">
-  <div class="container">
-    <section class="card">
-      <h2>Co tu najdeš</h2>
-      <ul>
-        <li>Výukové video montáže počítače (embed)</li>
-        <li>Studijní materiály ke stažení (PDF)</li>
-        <li>Interaktivní kvíz s okamžitým vyhodnocením</li>
-        <li>Katalog současného hardwaru</li>
-      </ul>
-    </section>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <section class="grid">
-      <a class="tile" href="video.html">
-        <h3>Výukové video</h3>
-        <p>Kroková montáž PC + titulky.</p>
-      </a>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-      <a class="tile" href="materialy.html">
-        <h3>Materiály</h3>
-        <p>PDF pracovní listy a taháky.</p>
-      </a>
+  <body>
+    <div id="header"></div>
 
-      <a class="tile" href="kviz.html">
-        <h3>Kvíz</h3>
-        <p>Ověření znalostí ihned po vyplnění.</p>
-      </a>
+    <main id="obsah" class="site-main">
+      <div class="container">
+        <section class="card">
+          <h2>Výukové video montáže počítače</h2>
 
-      <a class="tile" href="katalog.html">
-        <h3>Katalog hardware</h3>
-        <p>Přehled komponent a pojmů.</p>
-      </a>
-    </section>
-  </div>
-</main>
+          <p>
+            Video krok za krokem ukazuje základní postup sestavení stolního
+            počítače. Zaměřuje se na správné osazení hlavních komponent,
+            zapojení kabeláže a první spuštění sestavy.
+          </p>
 
-<div id="footer"></div>
+          <div class="video-wrapper">
+            <iframe
+              id="videoFrame"
+              src="https://www.youtube-nocookie.com/embed/ucXCWgPMOjg"
+              title="Výukové video montáže počítače"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
 
-<script src="../assets/js/include.js"></script>
+        <section class="card video-chapters">
+          <h2>Kapitoly videa</h2>
 
-<script>
-async function loadLayout(){
-  await includeHTML("header", "../components/header.html");
-  await includeHTML("footer", "../components/footer.html");
+          <p>
+            Pomocí následujících odkazů lze video spustit přímo od vybrané
+            části. Kapitoly slouží k rychlému návratu ke konkrétním krokům
+            montáže.
+          </p>
 
-  markActiveNav();
-  initMobileNav();
+          <ul class="chapter-list">
+            <li>
+              <a href="video.html?start=0">
+                <span class="chapter-time">00:00</span>
+                Úvod a představení sestavy
+              </a>
+            </li>
 
-  const year = document.getElementById("year");
+            <li>
+              <a href="video.html?start=60">
+                <span class="chapter-time">01:00</span>
+                Příprava pracoviště a bezpečnost
+              </a>
+            </li>
 
-  if(year){
-    year.textContent = new Date().getFullYear();
-  }
-}
+            <li>
+              <a href="video.html?start=120">
+                <span class="chapter-time">02:00</span>
+                Osazení procesoru do základní desky
+              </a>
+            </li>
 
-loadLayout();
-</script>
-</body>
+            <li>
+              <a href="video.html?start=240">
+                <span class="chapter-time">04:00</span>
+                Instalace operační paměti RAM
+              </a>
+            </li>
+
+            <li>
+              <a href="video.html?start=330">
+                <span class="chapter-time">05:30</span>
+                Montáž SSD disku
+              </a>
+            </li>
+
+            <li>
+              <a href="test.html?start=420">
+                <span class="chapter-time">07:00</span>
+                Instalace chladiče procesoru
+              </a>
+            </li>
+
+            <li>
+              <a href="video.html?start=570">
+                <span class="chapter-time">09:30</span>
+                Příprava počítačové skříně
+              </a>
+            </li>
+
+            <li>
+              <a href="video.html?start=690">
+                <span class="chapter-time">11:30</span>
+                Vložení základní desky do skříně
+              </a>
+            </li>
+
+            <li>
+              <a href="video.html?start=840">
+                <span class="chapter-time">14:00</span>
+                Montáž zdroje a zapojení napájení
+              </a>
+            </li>
+
+            <li>
+              <a href="video.html?start=990">
+                <span class="chapter-time">16:30</span>
+                Zapojení předního panelu a kabeláže
+              </a>
+            </li>
+
+            <li>
+              <a href="video.html?start=1110">
+                <span class="chapter-time">18:30</span>
+                Instalace grafické karty
+              </a>
+            </li>
+
+            <li>
+              <a href="video.html?start=1200">
+                <span class="chapter-time">20:00</span>
+                První spuštění počítače a závěr
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../assets/js/include.js"></script>
+    <script>
+      async function loadLayout() {
+        await includeHTML("header", "../components/header.html");
+        await includeHTML("footer", "../components/footer.html");
+
+        markActiveNav();
+        initMobileNav();
+
+        const year = document.getElementById("year");
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      }
+
+      loadLayout();
+
+      const params = new URLSearchParams(window.location.search);
+      const start = params.get("start");
+      const videoFrame = document.getElementById("videoFrame");
+
+      if (start && videoFrame) {
+        videoFrame.src =
+          "https://www.youtube-nocookie.com/embed/ucXCWgPMOjg?start=" +
+          encodeURIComponent(start) +
+          "&autoplay=1";
+      }
+    </script>
+  </body>
 </html>
