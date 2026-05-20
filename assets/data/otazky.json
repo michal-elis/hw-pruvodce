@@ -15,13 +15,13 @@
     "id": "q2",
     "text": "Co se stane, když zapomenete zapojit napájení grafické karty?",
     "options": {
-      "A": "Počítač bude fungovat normálně",
+      "A": "Počítač bude fungovat normálně, ale zvýší se spotřeba elektrické energie",
       "B": "Grafická karta nebude mít výkon",
       "C": "Počítač se často nespustí nebo zobrazí chybu",
       "D": "Sníží se bitová hloubka barev a rozlišení"
     },
     "correct": "C",
-    "explanation": "Moderní GPU bez napájení často nenaběhne nebo zobrazí chybu."
+    "explanation": "Moderní GPU bez napájení často nenaběhne nebo zahlásí chybu."
   },
   {
     "id": "q3",
@@ -109,7 +109,7 @@
   },
   {
     "id": "q10",
-    "text": "Jaký typ paměti se používá v moderních PC?",
+    "text": "Jaký typ paměti se používá v běžných moderních počítačích?",
     "options": {
       "A": "ECC UDIMM",
       "B": "DDR4/DDR5",
@@ -138,19 +138,19 @@
       "A": "Externí disk",
       "B": "Typ kabelu pro SSD disky",
       "C": "Interní SSD disk",
-      "D": "Typ paměti SSD RAM"
+      "D": "SSD disk, který se zapojuje v módu dual channel"
     },
     "correct": "C",
     "explanation": "M.2 SSD je interní disk, který se zapojuje přímo do desky bez použítí přídavné kabeláže."
   },
   {
     "id": "q13",
-    "text": "Co se stane, když není zapojený CPU chladič?",
+    "text": "Co se stane, když není nainstalován chladič CPU",
     "options": {
-      "A": "Nic",
+      "A": "Procesor sníží výkon na 80%",
       "B": "Počítač se po pár hodinách práce zpomalí",
-      "C": "CPU se velice rychle přehřeje",
-      "D": "Počítač nepůjde spustit"
+      "C": "CPU se může velice rychle přehřeje",
+      "D": "Počítač nepůjde ani spustit"
     },
     "correct": "C",
     "explanation": "Bez chlazení se CPU během sekund přehřeje."
@@ -184,7 +184,7 @@
   "text": "Můžeme spustit počítač bez chladiče procesoru, pokud chceme pouze vstoupit do BIOSu?",
   "options": {
     "A": "Ano, protože BIOS nezatěžuje procesor",
-    "B": "Ano, ale jen u starších procesorů",
+    "B": "Ano, ale jen u nejnovějších procesorů",
     "C": "Ne, procesor se může velmi rychle přehřát i v BIOSu",
     "D": "Ne, protože počítač se bez chladiče vůbec nespustí"
   },
@@ -217,7 +217,7 @@
 }, 
 {
   "id": "q19",
-  "text": "Je nutné mít na operační paměti (RAM) chladič?",
+  "text": "Je nutné mít na operační paměti (RAM) aktivní chladič?",
   "options": {
     "A": "Ano, bez chladiče se  paměť do pár sekund přehřeje a může se i zničit",
     "B": "Ano, ale pouze poukud používáme dual-channel",
@@ -234,7 +234,7 @@
     "A": "Disk nebude fungovat kvůli nekompatibilitě",
     "B": "Disk bude fungovat, ale rychlost bude omezena na SATA II",
     "C": "Disk nepůjde zapojit, protože konektory jsou rozdílné",
-    "D": "Disk nebude fungovat a může se dokonce i poškodit kvůli vyššímu napětí"
+    "D": "Disk nebude fungovat a může se dokonce i poškodit kvůli vyššímu napětí na napájecím konektoru"
   },
   "correct": "B",
   "explanation": "Rozhraní SATA je zpětně kompatibilní. Disk SATA II bude fungovat i na SATA III portu, ale maximální rychlost bude omezena na standard SATA II."
@@ -253,7 +253,7 @@
 },
 {
   "id": "q22",
-  "text": "Který z těchto způsobů byste použili při sestavování počítače k ochraně proti elektrostatickému výboji?",
+  "text": "Kterou z těchto metod byste použili při sestavování počítače k ochraně proti elektrostatickému výboji?",
   "options": {
     "A": "Pracovat na koberci, který nás izoluje od země a mít na sobě pouze oblečení z materiálu PES",
     "B": "Použít antistatický náramek nebo se pravidelně dotýkat uzemněného kovového předmětu",
@@ -298,5 +298,209 @@
   },
   "correct": "C",
   "explanation": "M.2 SSD disk je napájen přímo přes M.2 slot na základní desce, takže nevyžaduje žádné samostatné napájení."
+},
+{
+  "id": "q26",
+  "text": "Při montáži základní desky do skříně zjistíte, že jeden distanční sloupek je umístěný mimo montážní otvor desky. Co je správný postup?",
+  "options": {
+    "A": "Sloupek ponechat na místě, protože desku alespoň lépe podepře",
+    "B": "Sloupek odstranit nebo přesunout na správnou pozici podle otvorů v základní desce",
+    "C": "Zašroubovat do něj šroub, aby nezůstal prázdný a až na něj položit základní desku",
+    "D": "Přelepit sloupek izolační páskou a pokračovat v montáži"
+  },
+  "correct": "B",
+  "explanation": "Distanční sloupky musí odpovídat montážním otvorům základní desky. Sloupek navíc na špatném místě může způsobit zkrat a poškodit desku nebo další komponenty."
+},
+{
+  "id": "q27",
+  "text": "Při instalaci většího chladiče procesoru si všimnete, že po jeho upevnění bude horší přístup ke slotům RAM. Jaký postup je v takové situaci nejvhodnější?",
+  "options": {
+    "A": "Nejprve osadit paměťové moduly RAM a teprve potom namontovat chladič procesoru",
+    "B": "Namontovat chladič procesoru jako první a paměti RAM zatlačit do slotů pod úhlem",
+    "C": "Paměti RAM osadit až po prvním spuštění počítače",
+    "D": "Chladič procesoru méně dotáhnout, aby se dal v případě potřeby částečně odsunout."
+  },
+  "correct": "A",
+  "explanation": "U větších chladičů může být po jejich montáži horší přístup k paměťovým slotům. Proto bývá praktičtější osadit RAM ještě před montáží chladiče procesoru."
+},
+{
+  "id": "q28",
+  "text": "Při instalaci M.2 SSD zjistíte, že se nad slotem nachází chladič, který je součástí základní desky. Jaký postup dává největší smysl?",
+  "options": {
+    "A": "SSD zasunout pod chladič bez jeho demontáže",
+    "B": "Chladič sundat, SSD zasunout do M.2 slotu, přitlačit k desce a potom chladič znovu upevnit",
+    "C": "M.2 SSD raději připojit SATA kabelem, aby nebylo nutné chladič sundávat",
+    "D": "SSD místo toho zasunout do PCI Espress slotu"
+  },
+  "correct": "B",
+  "explanation": "Pokud je M.2 slot zakrytý chladičem, je potřeba chladič nejprve sundat. SSD se zasune do konektoru pod mírným úhlem, přitlačí k základní desce a následně se zajistí šroubkem nebo chladičem."
+},
+{
+  "id": "q29",
+  "text": "Po prvním spuštění nově sestaveného počítače se ventilátory roztočí, ale na monitoru se nezobrazí obraz. V sestavě je samostatná grafická karta. Která z následujících kontrol je v této situaci nejméně pravděpodobně užitečná?",
+  "options": {
+    "A": "Zkontrolovat, zda je monitor připojený do výstupu grafické karty",
+    "B": "Zkontrolovat, zda je grafická karta správně zasunutá v PCI Express slotu",
+    "C": "Zkontrolovat, zda je ke grafické kartě připojené přídavné napájení, pokud ho vyžaduje",
+    "D": "Zkontrolovat, zda je počítač připojený do elektřiny"
+  },
+  "correct": "D",
+  "explanation": "Chybějící nebo špatně připojený SATA kabel u pevného disku může způsobit problém s načtením systému, ale obvykle nevysvětluje situaci, kdy se po zapnutí vůbec nezobrazí obraz. U samostatné grafické karty je vhodnější nejprve ověřit připojení monitoru, správné usazení karty a případné přídavné napájení."
+},
+{
+  "id": "q30",
+  "text": "Při zapojování kabelů předního panelu skříně si nejste jistí polaritou jednotlivých konektorů. U kterých prvků je správná polarita důležitá?",
+  "options": {
+    "A": "U tlačítek napájení a resetu",
+    "B": "U signalizačních LED diod",
+    "C": "U všech konektorů předního panelu bez rozdílu",
+    "D": "U konektorů USB a audio, protože nemají žádné mechanické klíčování"
+  },
+  "correct": "B",
+  "explanation": "U tlačítek předního panelu na polaritě nezáleží, protože fungují jako spínače. U LED diod je správná polarita důležitá, jinak nemusí svítit."
+},
+{
+  "id": "q30",
+  "text": "Po prvním zapnutí nově sestaveného počítače trvá delší dobu, než se objeví obraz. Ventilátory se točí a počítač se po chvíli spustí normálně. Jaké vysvětlení nejlépe odpovídá této situaci?",
+  "options": {
+    "A": "Při prvním spuštění může probíhat inicializace paměti nebo detekce nově připojených zařízení",
+    "B": "Počítač se vždy při prvním spuštění automaticky restartuje kvůli zvýšenému doběru elektrického proudu",
+    "C": "Dlouhé první spuštění znamená, že procesor má slabé napájení a není zapojen EPS konektor",
+    "D": "Základní deska při prvním spuštění vždy maže nastavení BIOSu"
+  },
+  "correct": "A",
+  "explanation": "První spuštění počítače může trvat déle než běžné zapnutí. Důvodem může být například inicializace operační paměti nebo detekce nově připojených zařízení."
+},
+{
+  "id": "q30",
+  "text": "Po sestavení počítače se po každém úplném odpojení od elektřiny znovu nastavuje systémový čas a BIOS/UEFI neuchová naše nastavení. Čím to může být způsobeno?",
+  "options": {
+    "A": "Nesprávně připojeným datovým SATA kabelem",
+    "B": "Chybějící, vybitou nebo elektricky odpojenou baterií CMOS",
+    "C": "slabým počítačovým zdrojem",
+    "D": "Nedotaženým šroubkem M.2 u SSD disku, na kterém jsou tyto údaje uloženy"
+  },
+  "correct": "B",
+  "explanation": "Baterie CMOS pomáhá udržet nastavení BIOSu/UEFI a systémový čas i po odpojení počítače od napájení. Pokud chybí, je vybitá nebo je oddělená ochranným plastovým proužkem, mohou se tato nastavení ztrácet."
+},
+{
+  "id": "q31",
+  "text": "Při montáži napájecího zdroje do spodní části skříně má skříň dole větrací otvor s prachovým filtrem. Jaká orientace zdroje je v takové situaci obvykle nejvhodnější?",
+  "options": {
+    "A": "Ventilátorem dolů, aby zdroj nasával chladnější vzduch zvenku",
+    "B": "Ventilátorem nahoru, aby zdroj nasával teplý vzduch od grafické karty",
+    "C": "Ventilátorem směrem na bok, aby se zlepšilo chlazení základní desky",
+    "D": "Na orientaci zdroje nezáleží"
+  },
+  "correct": "A",
+  "explanation": "Pokud je zdroj umístěný dole a skříň má spodní větrací otvor, ventilátor zdroje obvykle směřuje dolů. Zdroj tak může nasávat chladnější vzduch zvenku přes prachový filtr."
+},
+{
+  "id": "q32",
+  "text": "Při návrhu proudění vzduchu ve skříni chcete omezit usazování prachu, ale zároveň zachovat rozumný odvod tepla. Které řešení je nejvhodnější?",
+  "options": {
+    "A": "Nastavit více ventilátorů na odvod vzduchu než na nasávání",
+    "B": "Vytvořit mírný přetlak, kdy do skříně proudí o něco více vzduchu, než kolik se odvádí ven",
+    "C": "Vyndat prachové filtry",
+    "D": "Vypnout přední ventilátory, aby se do skříně nedostával prach"
+  },
+  "correct": "B",
+  "explanation": "Mírný přetlak může pomoci omezit usazování prachu, ale zároveň je potřeba zachovat odvod teplého vzduchu ze skříně. Proto je vhodnější mít o něco silnější nasávání než odvod, ne nechat všechny ventilátory foukat pouze dovnitř."
+},
+{
+  "id": "q33",
+  "text": "Při montáži grafické karty zjistíte, že po jejím osazení bude výrazně horší přístup k některým konektorům na základní desce. Co je nejvhodnější udělat ještě před instalací grafické karty?",
+  "options": {
+    "A": "Připojit nebo zkontrolovat hůře dostupné konektory, například přední panel, SATA kabely nebo M.2 sloty",
+    "B": "Nechat zapojení hůře dostupných kabelů až na konec, protože grafická karta se má montovat vždy jako první",
+    "C": "Vyjmout baterii CMOS, protože po instalaci grafické karty k ní nebude přístup a po instalaci zdroje už nebude potřeba",
+    "D": "Přesunout operační paměť zadních volných slotů"
+  },
+  "correct": "A",
+  "explanation": "Moderní grafické karty mohou po instalaci zhoršit přístup k některým částem základní desky, například ke konektorům předního panelu, M.2 slotům, baterii CMOS nebo SATA konektorům. Proto je vhodné tyto části zkontrolovat nebo zapojit ještě před osazením grafické karty."
+},
+{
+  "id": "q34",
+  "text": "Při výběru SSD disku porovnáváte dva modely. Který parametr bude mít pravděpodobně větší vliv na běžnou odezvu operačního systému a načítání aplikací?",
+  "options": {
+    "A": "Maximální sekvenční rychlost čtení, protože je to klíčový uváděný parametr",
+    "B": "Výkon při náhodném přístupu k datům, protože systém často pracuje s velkým množstvím malých souborů",
+    "C": "Celková kapaicta disku, protože po zaplnění se znatelně zpomalí",
+    "D": "Maximální TBW, protože po jeho dosažení bude disk pomalejší"
+  },
+  "correct": "B",
+  "explanation": "Při běžném používání nejsou sekvenční rychlosti vždy nejdůležitější. Velký vliv na odezvu systému má náhodný přístup k datům, tedy práce s velkým množstvím malých souborů. Tento výkon se často vyjadřuje pomocí IOPS."
+},
+{
+  "id": "q35",
+  "text": "Uživatel vybírá SSD do běžného domácího počítače. Jeden levnější model používá QLC paměti, druhý dražší model používá TLC paměti. V čem je hlavní rozdíl, který může být při výběru důležitý?",
+  "options": {
+    "A": "QLC ukládá méně bitů do jedné buňky než TLC, proto je většinou rychlejší",
+    "B": "TLC obvykle nabízí lepší poměr výkonu a životnosti než QLC",
+    "C": "TLC disky fungují pouze přes SATA, zatímco QLC pouze přes PCI Express",
+    "D": "QLC disky slouží pouze jako sekundární úložiště pro archivaci dat a neumožňují bootování operačního systému"
+  },
+  "correct": "B",
+  "explanation": "TLC ukládá tři bity do jedné buňky a dnes jde o běžný typ pamětí u spotřebitelských SSD. QLC ukládá čtyři bity do jedné buňky, bývá levnější, ale obvykle má nižší životnost a pomalejší zápis."
+},
+{
+  "id": "q36",
+  "text": "Uživatel vybírá základní desku pro nový počítač a už má vybraný procesor i operační paměť. Co musí u základní desky ověřit jako jednu z nejdůležitějších věcí?",
+  "options": {
+    "A": "Zda má základní deska kompatibilní patici, čipset a podporovaný typ operační paměti",
+    "B": "Zda má základní deska stejného výrobce jako procesor a paměť",
+    "C": "Zda má základní deska přídavné napájení pro všechny paměťové sloty",
+    "D": "Zda má základní deska v chipsetu kompatibilní integrovanou grafickou kartu"
+  },
+  "correct": "A",
+  "explanation": "Kombinace základní desky a procesoru určuje platformu počítače. Je potřeba ověřit hlavně kompatibilitu patice, čipsetu a podporovaného typu operační paměti."
+},
+{
+  "id": "q37",
+  "text": "Po osazení M.2 SSD disku přestal být v systému vidět jeden ze SATA disků. Disk i kabeláž jsou v pořádku. Co je vhodné ověřit v manuálu základní desky?",
+  "options": {
+    "A": "Zda se některé SATA porty nedeaktivují při použití konkrétního M.2 slotu",
+    "B": "Zda základní deska nepodporuje pouze jeden disk",
+    "C": "Zda je nutné připojit M.2 SSD samostatným SATA napájecím kabelem",
+    "D": "Zda není potřeba vyměnit SATA datový kabel za novější verzi podporující NVMe"
+  },
+  "correct": "A",
+  "explanation": "U některých základních desek může dojít po osazení konkrétního M.2 slotu k deaktivaci některého SATA portu. Proto je vhodné zkontrolovat manuál základní desky."
+},
+{
+  "id": "q38",
+  "text": "Co znamená u zdroje certifikace 80 PLUS?",
+  "options": {
+    "A": "Certifikace 80 PLUS hodnotí hlavně účinnost zdroje, ale sama o sobě nezaručuje celkovou kvalitu",
+    "B": "Certifikace 80 PLUS určuje maximální možnou provozní teplotu",
+    "C": "Certifikace 80 PLUS zaručuje, že zdroj má vždy všechny ochrany včetně OVP, UVP, OCP, SCP a OTP",
+    "D": "Certifikace 80 PLUS znamená, že zdroj bude pracovat ideálně při zatížení 80 a více procent"
+  },
+  "correct": "A",
+  "explanation": "Certifikace 80 PLUS slouží hlavně jako orientační údaj o účinnosti zdroje. Vyšší účinnost znamená nižší ztráty a méně odpadního tepla, ale sama o sobě nezaručuje kvalitu součástek, stabilitu napětí ani celkové konstrukční provedení zdroje."
+},
+{
+  "id": "q39",
+  "text": "Při delším kopírování velkých souborů na zcela novém NVME M.2 SSD začne rychlost zápisu po několika vteřinách výrazně klesat. Čím to může být způsobeno?",
+  "options": {
+    "A": "Thermal throttlingem, kdy SSD kvůli vysoké teplotě sníží výkon",
+    "B": "Disk může mít výrobní vadu",
+    "C": "Tím, že operační systém úmyslně disk zpomalí, aby šetřil TBW",
+    "D": "Tím, že jsme disk omylem zapojili do SATA konektoru"
+  },
+  "correct": "A",
+  "explanation": "M.2 SSD mohou při vyšší zátěži dosahovat vysokých teplot. Pokud se přehřívají, může dojít ke snížení výkonu označovanému jako thermal throttling. Pomoci může pasivní chladič SSD a lepší proudění vzduchu ve skříni."
+},
+{
+  "id": "q40",
+  "text": "Před montáží počítače si chystáme vhodné šroubováky pro běžné počítačové šroubky. Jaký typ hlavy se používá nejčastěji?",
+  "options": {
+    "A": "Torx",
+    "B": "Imbus",
+    "C": "Phillips (PH)",
+    "D": "Pozidriv (PZ)"
+  },
+  "correct": "C",
+  "explanation": "U většiny běžných počítačových šroubků se používá křížová hlava typu Phillips (PH). Šroubovák Pozidriv (PZ) vypadá velice podobně, ale má jiný tvar drážky a může ze šroubu sklouznout nebo poškodit hlavu šroubu."
 }
 ]
