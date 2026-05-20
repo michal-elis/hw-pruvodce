@@ -166,7 +166,7 @@
     summaryEl.innerHTML = `
       <strong>Hotovo.</strong> Výsledek: ${score} / ${QUESTIONS.length} (${percent} %).
       <div class="muted" style="margin-top:8px;">
-        Tip: Projdi si chyby a vrať se k části videa, která je vysvětluje.
+        Tip: Projdi si chyby a vrať se k té části výukových materiálů, která je vysvětluje.
       </div>
     `;
   }
